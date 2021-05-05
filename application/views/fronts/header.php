@@ -3,19 +3,17 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <ul class="contact_detail list_none text-center text-md-left">
-                        <li><i class="ti-location-pin"></i>Jl. Raya Cilangkap No. 58
-Cilangkap, Cipayung
-Jakarta Timur 13870
-Indonesia</li>
-                    </ul>
+                      <ul class="list_none social_icons rounded_social social_white mt-2 mt-md-0">
+                          <li><a href="#"><i class="ion-social-youtube-outline"></i></a></li>
+                          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                          <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                           <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                      </ul>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list_none social_icons text-center rounded_social social_white text-md-right mt-2 mt-md-0">
-                        <li><a href="#"><i class="ion-social-youtube-outline"></i></a></li>
-                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                        <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                         <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                    <ul class="list_none header_list list_menu justify-content-center justify-content-sm-end">
+                        <li><a href="demo-hosting/register.html">Register</a></li>
+                        <li><a href="demo-hosting/login.html">Login</a></li>
                     </ul>
                 </div>
             </div>
