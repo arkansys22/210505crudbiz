@@ -22,9 +22,9 @@
   <div class="container " >
     <nav class="navbar navbar-expand-lg">
     	<a class="navbar-brand" href="<?php echo base_url()?>">
-			<img class="logo_light" src="<?php echo base_url()?>assets/frontend/wmp_p.png" alt="logo" />
-            <img class="logo_dark" src="<?php echo base_url()?>assets/frontend/wmp_p.png" alt="logo" />
-            <img class="logo_default" src="<?php echo base_url()?>assets/frontend/wmp_p.png" alt="logo" />
+			<img class="logo_light" src="<?php echo base_url()?>assets/frontend/campur/<?php echo $identitas->logo?>" alt="logo" />
+            <img class="logo_dark" src="<?php echo base_url()?>assets/frontend/campur/<?php echo $identitas->logo?>" alt="logo" />
+            <img class="logo_default" src="<?php echo base_url()?>assets/frontend/campur/<?php echo $identitas->logo?>" alt="logo" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
       	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -33,17 +33,17 @@
                     <a class="nav-link " href="<?php echo base_url()?>">Beranda</a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Tentang Kami</a>
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Harga Termurah</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>visimisi">FILOSOFI VISI & MISI</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>motto">MOTTO WMP</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>milestone">MILESTONE WMP</a></li>
-
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>komisaris">DEWAN KOMISARIS</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>direksi">Dewan Direksi</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>strukturcompany">Struktur Company WMP</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>strukturorganisasi">Struktur Organisasi</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Landing Page</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Basic</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Business</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Compro</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Properti</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Dealers</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Hukum</a></li>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Custom</a></li>
 
                             </ul>
                         </div>
