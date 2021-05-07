@@ -9,12 +9,12 @@
             </div>
             <div class="col-md-6 col-sm-12 animation" data-animation="fadeInRight" data-animation-delay="0.4s">
                 <div class="heading_s1">
-                  <h2>Tentang Widodo Makmur</h2>
+                  <h2>Crudbiz</h2>
                 </div>
-                <p style="text-align:justify;" >PT Widodo makmur Perkasa adalah perusahaan Holding yang membawahi lima lini bisnis yaitu Integrated Livestock, Meat Processing, Integrated Poultry, Food & Commodity dan Construction & Energy. Dimulai dengan usaha feedlot sejak tahun 1995 dan dikembangkan secara profesional pada tahun 1999.Usaha ini berkembang pesat dan menempatkan WMP sebagai salah satu perusahaan penyuplai sapi terbesar di Indonesia. Dengan aset total saat ini mencapai 2,5T dan akan terus berkembang dengan langkah pengembangan progresif kami.</p>
+                <p style="text-align:justify;" >Crudbiz membantu </p>
 
 
-                <a href="#" class="btn btn-black">Selengkapnya</a>
+                <a href="#" class="btn btn-black">Lihat Klien</a>
             </div>
         </div>
     </div>

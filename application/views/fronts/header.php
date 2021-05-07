@@ -10,12 +10,6 @@
                            <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
                       </ul>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list_none header_list list_menu justify-content-center justify-content-sm-end">
-                        <li><a href="demo-hosting/register.html">Register</a></li>
-                        <li><a href="demo-hosting/login.html">Login</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -32,8 +26,11 @@
                 <li class="dropdown dropdown-mega-menu">
                     <a class="nav-link " href="<?php echo base_url()?>">Beranda</a>
                 </li>
+                <li class="dropdown dropdown-mega-menu">
+                    <a class="nav-link " href="<?php echo base_url()?>">Template</a>
+                </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Harga Termurah</a>
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Daftar Harga</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Landing Page</a></li>
@@ -48,108 +45,49 @@
                             </ul>
                         </div>
                 </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Lini Bisnis</a>
-                    <div class="dropdown-menu">
-                        <ul>
-                          <?php  foreach ($posts_bisnis as $post_new){ ?>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url("bisnis/$post_new->bisnis_judul_seo") ?>"><?php echo $post_new->bisnis_judul?></a></li>
-                          <?php } ?>
-                        </ul>
-                    </div>
+                <li class="dropdown dropdown-mega-menu">
+                    <a class="nav-link " href="<?php echo base_url()?>">Klien Kami</a>
                 </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link " href="#" data-toggle="dropdown">Produk</a>
-                    <div class="dropdown-menu">
-                        <ul >
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk1">Sapi</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk2">Daging Sapi</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk3">Produk Olahan</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk4">Kulit</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk5">Produk Ayam</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk6">Komoditas</a></li>
-                        </ul>
-                    </div>
-                </li>
-              <!--   <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Investor</a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a class="dropdown-item menu-link dropdown-toggler" href="#">Investor</a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>investor-informasipemegangsaham">Informasi Pemegang Saham</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>investor-kegiatan">Kegiatan Update dan Presentasi Perusahaan</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>investor-informasipendukung">Informasi Pendukung</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                 <li><a class="dropdown-item menu-link dropdown-toggler" href="#">Tata Kelola Perusahaan</a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-codeofconduct">Code Of Conduct</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-pedomandewan">Pedoman Dewan Komisaris</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-pedomandireksi">Pedoman Direksi</a></li>
-                                             <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-komitenominasi">Komite Nominasi & Nemunerasi</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-komiteaudit">Komite Audit</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-sekretarisperusahaan">Sekretaris Perusahaan</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>tatakelola-internalaudit">Internal Audit Charter</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                        </ul>
-                    </div>
-                </li> -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Kontribusi Sosial</a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>kontrib">Kesatriaan Entrepreneur Indonesia</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>kemitraan_unggas">Kegiatan CSR</a></li>
-                        </ul>
-                    </div>
-                </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle nav-link " href="#" data-toggle="dropdown">Media</a>
                     <div class="dropdown-menu">
                         <ul>
+                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Belajar</a></li>
                             <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>berita">Berita</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk2">WMP Megazine</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>produk3">Youtube WMP</a></li>
 
                         </ul>
                     </div>
                 </li>
-
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Karir</a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="#">Ikhtisar</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="#">Bergabung Bersama Kami</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="#">Workshop dan Pelatihan</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="#">Program Kami</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>hubungi-kami-karir">Hubungi Kami</a></li>
-                        </ul>
-                    </div>
+                <li class="dropdown dropdown-mega-menu">
+                    <a class="nav-link " href="<?php echo base_url()?>">Hubungi Kami</a>
                 </li>
             </ul>
         </div>
         <ul class="navbar-nav attr-nav align-items-center">
-                <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="ion-ios-search-strong"></i></a>
-                	<div class="search-overlay">
-                        <span class="close-search"><i class="ion-ios-close-empty"></i></span>
-                        <div class="search_wrap">
-                            <form>
-                                <input type="text" placeholder="Search" class="form-control" id="search_input">
-                                <button type="submit" class="search_icon"><i class="ion-ios-search-strong"></i></button>
-                            </form>
+                <li class="dropdown"><a class=" nav-link" href="#" data-toggle="dropdown"><i class="ion-person"></i></a>
+                	<div class="cart_box dropdown-menu dropdown-menu-right">
+                    <div class="field_form form_style4">
+                      <br>
+                      <form method="post" name="abc">
+                        <div class="form-group col-md-12">
+                            <input required placeholder="Username" class="form-control" name="name" type="text">
+                            <label>Username:</label>
                         </div>
+                        <div class="form-group col-md-12">
+                            <input required placeholder="Name" class="form-control" name="name" type="text">
+                            <label>Password:</label>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <button type="button" class="btn btn-default btn-aylen col-md-12">Masuk</button>
+                            <p><center><a href="">Lupa kata sandi?</a></center></p>
+                            <p><button type="button" class="btn btn-success btn-aylen col-md-12">Buat Akun Baru</button></p>
+                            <p><span>Buat akun untuk dapatkan manfaatnya</span></p>
+                        </div>
+                      </form>
+                    </div>
                     </div>
                 </li>
+                <li><a href="" class="nav-link "><i class="ion-social-whatsapp-outline"></i></a>
             </ul>
     </nav>
   </div>
