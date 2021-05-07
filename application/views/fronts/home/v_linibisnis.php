@@ -1,51 +1,36 @@
-<section class="small_pb light_gray_bg">
-	<div class="container">
+<section id="klien" class="small_pt small_pb">
+	<div class="container-fluid">
+		<div class="row">
+					<div class="col-sm-12" >
+							<div class="heading_s4 text-center">
+								<span class="sub_title">Daftar Klien</span>
+									<h2>Daftar Klien</h2>
+							</div>
+							<p><center>Terbukti mampu memberikan hasil yang sesuai dengan karakter Bisnis Anda</center></p>
+					</div>
+			</div>
     	<div class="row">
-        	<div class="col-md-12 " >
-                <div class="heading_s4 text-center">
-                	<span class="sub_title">LINI BISNIS</span>
-                    <h2>Lini Bisnis</h2>
-            	</div>
-            </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-            	<div class="clearfix small_divider"></div>
-            </div>
-        </div>
-
-
-				<div class="row ">
-					<div class="col-md-12">
-							<div class="blog_wrap carousel_slide3 owl-carousel owl-theme" data-margin="10" data-loop="true" data-autoplay="true" data-autoplay-timeout="2000">
+        	<div class="col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
+            	<ul class="list_none carousel_slide2 owl-carousel gallery_hover_style3" data-loop="true" data-margin="15" data-dots="false" data-autoplay="true" data-center="true">
 								<?php  foreach ($posts_bisnis as $post_new){
 									?>
-										<div class="items">
-												<div class="bisnis_post bisnis_style1">
-														<div class="blog_img">
-																<a href="<?php echo base_url("bisnis/$post_new->bisnis_judul_seo") ?>">
-																	<?php
-								                             if(empty($post_new->bisnis_gambar)) {
-								                               echo "<img src='".base_url()."assets/images/blog_small_img1_350X198.jpg'>";
-								                             }else {
-								                               echo " <img src='".base_url()."assets/frontend/linibisnis/".$post_new->bisnis_gambar."'> ";}
-								                             ?>
+										<li>
 
-																</a>
-														</div>
-														<div class="blog_content bg-white">
-                                <div class="blog_text">
-                                    <center><h6 class="blog_title"><a href="<?php echo base_url("bisnis/$post_new->bisnis_judul_seo") ?>"><?php echo $post_new->bisnis_judul?></a></h6><br></center>
+												<a href="<?php echo base_url("bisnis/$post_new->bisnis_judul_seo")?>">
+                            	<div class="gallery_img">
+																<?php
+																					 if(empty($post_new->bisnis_gambar)) {
+																						 echo "<img src='".base_url()."assets/images/blog_small_img1_350X198.jpg'>";
+																					 }else {
+																						 echo " <img src='".base_url()."assets/frontend/linibisnis/".$post_new->bisnis_gambar."'> ";}
+																					 ?>
                                 </div>
-                            </div>
-												</div>
-										</div>
-									<?php } ?>
+												</a>
 
-								</div>
-						</div>
-				</div>
-
-
+                    </li>
+										<?php } ?>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>

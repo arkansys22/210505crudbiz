@@ -34,7 +34,7 @@ class Main extends CI_Controller {
 		}else{
 			redirect('main');
 		}
-		$this->load->view('fronts/index',$data);
+		$this->load->view('fronts/home/index',$data);
   }
   public function bisnis($id)
 	{

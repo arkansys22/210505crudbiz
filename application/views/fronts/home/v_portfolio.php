@@ -3,10 +3,10 @@
     	<div class="row">
             <div class="col-sm-12" >
                 <div class="heading_s4 text-center">
-                	<span class="sub_title">Produk Terbaik</span>
-                    <h2>Produk Kami</h2>
+                	<span class="sub_title">Model Template</span>
+                    <h2>Model Template</h2>
                 </div>
-                <p><center>Dengan bangga memperkenalkan produk-produk kami</center></p>
+                <p><center>Pilihan template yang tepat dan bisa di kustom sesuai dengan karakter bisnis Anda</center></p>
             </div>
         </div>
         <div class="row">
@@ -17,13 +17,13 @@
         <div class="row mb-3 mb-sm-5" >
             <div class="col-md-12 text-center">
                 <ul class="list_none portfolio_filter filter_tab4">
-                    <li><a href="#" class="current" data-filter=".livestock">Sapi</a></li>
-                    <li><a href="#" data-filter=".meat">Daging Sapi</a></li>
-                    <li><a href="#" data-filter=".meatp">Produk Olahan</a></li>
-                    <li><a href="#" data-filter=".leather">Kulit</a></li>
-                    <li><a href="#" data-filter=".poultry">Produk Ayam</a></li>
-                    <li><a href="#" data-filter=".comodity">Komoditas</a></li>
-                    <li><a href="#" data-filter=".konstruksi">jasa konstruksi dan energi </a></li>
+                    <li><a href="#" class="current"  data-filter=".comodity">Landing Page</a></li>
+                    <li><a href="#" data-filter=".livestock">UMKM</a></li>
+                    <li><a href="#" data-filter=".meat">Properti</a></li>
+                    <li><a href="#" data-filter=".meatp">Fashion</a></li>
+                    <li><a href="#" data-filter=".leather">Kuliner / Restoran</a></li>
+                    <li><a href="#" data-filter=".poultry">Otomotif</a></li>
+                    <li><a href="#" data-filter=".konstruksi">Hukum</a></li>
                 </ul>
             </div>
         </div>
