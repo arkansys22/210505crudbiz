@@ -21,7 +21,7 @@
                     <li><a href="#" data-filter=".livestock">UMKM</a></li>
                     <li><a href="#" data-filter=".meat">Properti</a></li>
                     <li><a href="#" data-filter=".meatp">Fashion</a></li>
-                    <li><a href="#" data-filter=".leather">Kuliner / Restoran</a></li>
+                    <li><a href="#" data-filter=".leather">Food & Beverage</a></li>
                     <li><a href="#" data-filter=".poultry">Otomotif</a></li>
                     <li><a href="#" data-filter=".konstruksi">Hukum</a></li>
                 </ul>

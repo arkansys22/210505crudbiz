@@ -64,7 +64,7 @@
 <!-- END SECTION COUNTER -->
 
 <!-- START SECTION SERVICE -->
-<?php $this->load->view('fronts/home/v_service')?>
+<?php $this->load->view('fronts/home/v_testimonial')?>
 <!-- END SECTION SERVICE -->
 
 <!-- START SECTION TEAM -->
@@ -85,10 +85,6 @@
     </div>
 </section>
 <!-- END SECTION CALL TO ACTION -->
-
-<!-- START SECTION TESTIMONIAL -->
-<?php $this->load->view('fronts/home/v_testi')?>
-<!-- END SECTION TESTIMONIAL -->
 
 <!-- START SECTION BLOG -->
 <?php $this->load->view('fronts/home/v_blog')?>
