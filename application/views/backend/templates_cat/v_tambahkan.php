@@ -10,12 +10,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Add Bisnis</h1>
+          <h1>Add Category templates</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?php echo base_url()?>aspanel/bisnis">Bisnis</a></li>
-            <li class="breadcrumb-item active">Add Bisnis</li>
+            <li class="breadcrumb-item"><a href="<?php echo base_url()?>aspanel/templates">templates</a></li>
+            <li class="breadcrumb-item active">Add Category templates</li>
           </ol>
         </div>
       </div>
@@ -36,7 +36,7 @@
 
             <!-- form start -->
             <?php $attributes = array('class'=>'form-horizontal','role'=>'form');
-            echo form_open_multipart('aspanel/bisnis_tambahkan',$attributes); ?>
+            echo form_open_multipart('aspanel/templates_cat_tambahkan',$attributes); ?>
               <div class="card-body">
                 <div class="form-group">
 
@@ -44,7 +44,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" name="bisnis_judul" placeholder="Interesting Title Ideas">
+                        <input type="text" class="form-control" name="templates_cat_judul" placeholder="Interesting Title Ideas">
                       </div>
                     </div>
                   </div>
@@ -52,7 +52,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label>Description</label>
-                        <textarea class="textarea"  name ="bisnis_desk" style="width: 100%; height: 100px;"></textarea>
+                        <textarea class="textarea"  name ="templates_cat_desk" style="width: 100%; height: 100px;"></textarea>
                       </div>
                     </div>
                   </div>
@@ -60,14 +60,14 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label>Meta Description</label>
-                        <input type="text" class="form-control" name="bisnis_meta_desk" placeholder="Meta description">
+                        <input type="text" class="form-control" name="templates_cat_meta_desk" placeholder="Meta description">
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Keywords</label>
-                        <input type="text" class="form-control tags" id="blogs_keyword" value="" name="bisnis_keyword"  data-role="tagsinput"/>
+                        <input type="text" class="form-control tags" id="blogs_keyword" value="" name="templates_cat_keyword"  data-role="tagsinput"/>
                           <?php foreach ($tag as $tag){    } ?>
                       </div>
                     </div>
@@ -86,8 +86,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <button type="submit" name ="submit" class="btn btn-success" title="Add Products"><i class="fas fa-file-upload"></i> Add</button>
-                <a class="btn btn-outline-info" title="Cancel" href="<?php echo base_url()?>aspanel/bisnis"><i class="fab fa-creative-commons-sa"></i> Cancel</a>
+                <button type="submit" name ="submit" class="btn btn-success" title="Add templates"><i class="fas fa-file-upload"></i> Add</button>
+                <a class="btn btn-outline-info" title="Cancel" href="<?php echo base_url()?>aspanel/templates_cat"><i class="fab fa-creative-commons-sa"></i> Cancel</a>
 
               </div>
                 <?php echo form_close(); ?>

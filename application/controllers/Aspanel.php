@@ -22,8 +22,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -40,8 +40,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -58,8 +58,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -254,8 +254,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -373,8 +373,8 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = 'active';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -397,8 +397,8 @@ class Aspanel extends CI_Controller {
 				$data['identitas_stat']   = '';
 				$data['profil_stat']   = 'active';
 				$data['sliders_stat']   = '';
-				$data['products_stat']   = '';
-				$data['cat_products_stat']   = '';
+				$data['templates_stat']   = '';
+				$data['cat_templates_stat']   = '';
 				$data['slider_stat']   = '';
 				$data['blogs_stat']   = '';
 				$data['message_stat']   = '';
@@ -588,8 +588,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = 'active';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -842,8 +842,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = 'active';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -884,8 +884,8 @@ class Aspanel extends CI_Controller {
 				$data['identitas_stat']   = '';
 				$data['profil_stat']   = '';
 				$data['sliders_stat']   = '';
-				$data['products_stat']   = '';
-				$data['cat_products_stat']   = '';
+				$data['templates_stat']   = '';
+				$data['cat_templates_stat']   = '';
 				$data['slider_stat']   = 'active';
 				$data['blogs_stat']   = '';
 				$data['message_stat']   = '';
@@ -978,8 +978,8 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = 'active';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -1089,8 +1089,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = 'active';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -1150,18 +1150,18 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = 'active';
-		cek_session_akses ('products',$this->session->id_session);
+		cek_session_akses ('templates',$this->session->id_session);
 				if ($this->session->level=='1'){
-						$data['record'] = $this->Crud_m->view_where_ordering('products',array('products_status'=>'publish'),'products_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_status'=>'publish'),'templates_id','DESC');
 				}else{
-						$data['record'] = $this->Crud_m->view_where_ordering('products',array('products_post_oleh'=>$this->session->username,'products_status'=>'publish'),'products_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_post_oleh'=>$this->session->username,'templates_status'=>'publish'),'templates_id','DESC');
 				}
-				$this->load->view('backend/products/v_daftar', $data);
+				$this->load->view('backend/templates/v_daftar', $data);
 	}
 	/*	Bagian untuk Message - Penutup	*/
 
@@ -1173,8 +1173,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -1197,7 +1197,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('bisnis',array('bisnis_post_oleh'=>$this->session->username,'bisnis_status'=>'publish'),'bisnis_id','DESC');
 				}
-				$this->load->view('backend/bisnis/v_daftar', $data);
+				$this->load->view('backend/klien/v_daftar', $data);
 	}
 	public function bisnis_storage_bin()
 	{
@@ -1206,8 +1206,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -1230,7 +1230,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('bisnis',array('bisnis_post_oleh'=>$this->session->username,'bisnis_status'=>'delete'),'bisnis_id','DESC');
 				}
-				$this->load->view('backend/bisnis/v_daftar_hapus', $data);
+				$this->load->view('backend/klien/v_daftar_hapus', $data);
 	}
 	public function bisnis_tambahkan()
 	{
@@ -1309,8 +1309,8 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -1329,7 +1329,7 @@ class Aspanel extends CI_Controller {
 					$data['services']   = '';
 
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
-					$this->load->view('backend/bisnis/v_tambahkan', $data);
+					$this->load->view('backend/klien/v_tambahkan', $data);
 				}
 	}
 	public function bisnis_update()
@@ -1421,8 +1421,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = 'active';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = 'active';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -1440,7 +1440,7 @@ class Aspanel extends CI_Controller {
 				$data['produk']   = '';
 				$data['services']   = '';
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
-			$this->load->view('backend/bisnis/v_update', $data);
+			$this->load->view('backend/klien/v_update', $data);
 		}
 	}
 	function bisnis_delete_temp()
@@ -1466,22 +1466,22 @@ class Aspanel extends CI_Controller {
 			$_id = $this->db->get_where('bisnis',['bisnis_id' => $id])->row();
 			 $query = $this->db->delete('bisnis',['bisnis_id'=>$id]);
 			if($query){
-							 unlink("./bahan/foto_products/".$_id->bisnis_gambar);
+							 unlink("./bahan/foto_templates/".$_id->bisnis_gambar);
 		 }
 		redirect('aspanel/bisnis_storage_bin');
 	}
 	/*	Bagian untuk Bisnis - Penutup	*/
 
-	/*	Bagian untuk products cat - Pembuka	*/
-	public function products_cat()
+	/*	Bagian untuk templates cat - Pembuka	*/
+	public function templates_cat()
 	{
 		$data['karyawan_menu_open']   = '';
 		$data['home_stat']   = '';
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -1500,23 +1500,23 @@ class Aspanel extends CI_Controller {
 			$data['services']   = '';
 
 				if ($this->session->level=='1'){
-						cek_session_akses ('products_cat',$this->session->id_session);
-						$data['record'] = $this->Crud_m->view_where_ordering('products_category',array('products_cat_status'=>'publish'),'products_cat_id','DESC');
+						cek_session_akses ('templates_cat',$this->session->id_session);
+						$data['record'] = $this->Crud_m->view_where_ordering('templates_category',array('templates_cat_status'=>'publish'),'templates_cat_id','DESC');
 				}else{
-						cek_session_staff ('products_cat',$this->session->id_session);
-						$data['record'] = $this->Crud_m->view_where_ordering('products_category',array('products_cat_post_oleh'=>$this->session->username,'products_cat_status'=>'publish'),'products_cat_id','DESC');
+						cek_session_staff ('templates_cat',$this->session->id_session);
+						$data['record'] = $this->Crud_m->view_where_ordering('templates_category',array('templates_cat_post_oleh'=>$this->session->username,'templates_cat_status'=>'publish'),'templates_cat_id','DESC');
 				}
-				$this->load->view('backend/products_cat/v_daftar', $data);
+				$this->load->view('backend/templates_cat/v_daftar', $data);
 	}
-	public function products_cat_storage_bin()
+	public function templates_cat_storage_bin()
 	{
 		$data['karyawan_menu_open']   = '';
 		$data['home_stat']   = '';
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -1535,42 +1535,42 @@ class Aspanel extends CI_Controller {
 			$data['services']   = '';
 
 				if ($this->session->level=='1'){
-						cek_session_akses ('products_cat',$this->session->id_session);
-						$data['record'] = $this->Crud_m->view_where_ordering('products_category',array('products_cat_status'=>'delete'),'products_cat_id','DESC');
+						cek_session_akses ('templates_cat',$this->session->id_session);
+						$data['record'] = $this->Crud_m->view_where_ordering('templates_category',array('templates_cat_status'=>'delete'),'templates_cat_id','DESC');
 				}else{
-						cek_session_staff ('products_cat',$this->session->id_session);
-						$data['record'] = $this->Crud_m->view_where_ordering('products_category',array('products_cat_post_oleh'=>$this->session->username,'products_cat_status'=>'delete'),'products_cat_id','DESC');
+						cek_session_staff ('templates_cat',$this->session->id_session);
+						$data['record'] = $this->Crud_m->view_where_ordering('templates_category',array('templates_cat_post_oleh'=>$this->session->username,'templates_cat_status'=>'delete'),'templates_cat_id','DESC');
 				}
-				$this->load->view('backend/products_cat/v_daftar_hapus', $data);
+				$this->load->view('backend/templates_cat/v_daftar_hapus', $data);
 	}
-	public function products_cat_tambahkan()
+	public function templates_cat_tambahkan()
 	{
 
 		if (isset($_POST['submit'])){
 
-					$config['upload_path'] = 'bahan/foto_products/';
+					$config['upload_path'] = 'bahan/foto_templates/';
 					$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
 					$this->upload->initialize($config);
 					$this->upload->do_upload('gambar');
 					$hasil22=$this->upload->data();
 					$config['image_library']='gd2';
-					$config['source_image'] = './bahan/foto_products/'.$hasil22['file_name'];
+					$config['source_image'] = './bahan/foto_templates/'.$hasil22['file_name'];
 					$config['create_thumb']= FALSE;
 					$config['maintain_ratio']= FALSE;
 					$config['quality']= '60%';
 					$config['width']= 150;
 					$config['height']= 150;
-					$config['new_image']= './bahan/foto_products/'.$hasil22['file_name'];
+					$config['new_image']= './bahan/foto_templates/'.$hasil22['file_name'];
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
 
-					if ($this->input->post('products_cat_keyword')!=''){
-								$tag_seo = $this->input->post('products_cat_keyword');
+					if ($this->input->post('templates_cat_keyword')!=''){
+								$tag_seo = $this->input->post('templates_cat_keyword');
 								$tag=implode(',',$tag_seo);
 						}else{
 								$tag = '';
 						}
-					$tag = $this->input->post('products_cat_keyword');
+					$tag = $this->input->post('templates_cat_keyword');
 					$tags = explode(",", $tag);
 					$tags2 = array();
 					foreach($tags as $t)
@@ -1589,42 +1589,42 @@ class Aspanel extends CI_Controller {
 					$tags = implode(",", $tags2);
 					if ($hasil22['file_name']==''){
 									$data = array(
-													'products_cat_post_oleh'=>$this->session->username,
-													'products_cat_judul'=>$this->db->escape_str($this->input->post('products_cat_judul')),
-													'products_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_cat_judul')),
-													'products_cat_desk'=>$this->input->post('products_cat_desk'),
-													'products_cat_post_hari'=>hari_ini(date('w')),
-													'products_cat_post_tanggal'=>date('Y-m-d'),
-													'products_cat_post_jam'=>date('H:i:s'),
-													'products_cat_dibaca'=>'0',
-													'products_cat_status'=>'publish',
-													'products_cat_meta_desk'=>$this->input->post('products_cat_meta_desk'),
-													'products_cat_keyword'=>$tag);
+													'templates_cat_post_oleh'=>$this->session->username,
+													'templates_cat_judul'=>$this->db->escape_str($this->input->post('templates_cat_judul')),
+													'templates_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_cat_judul')),
+													'templates_cat_desk'=>$this->input->post('templates_cat_desk'),
+													'templates_cat_post_hari'=>hari_ini(date('w')),
+													'templates_cat_post_tanggal'=>date('Y-m-d'),
+													'templates_cat_post_jam'=>date('H:i:s'),
+													'templates_cat_dibaca'=>'0',
+													'templates_cat_status'=>'publish',
+													'templates_cat_meta_desk'=>$this->input->post('templates_cat_meta_desk'),
+													'templates_cat_keyword'=>$tag);
 											}else{
 												$data = array(
-													'products_cat_post_oleh'=>$this->session->username,
-													'products_cat_judul'=>$this->db->escape_str($this->input->post('products_cat_judul')),
-													'products_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_cat_judul')),
-													'products_cat_desk'=>$this->input->post('products_cat_desk'),
-													'products_cat_post_hari'=>hari_ini(date('w')),
-													'products_cat_post_tanggal'=>date('Y-m-d'),
-													'products_cat_post_jam'=>date('H:i:s'),
-													'products_cat_dibaca'=>'0',
-													'products_cat_status'=>'publish',
-													'products_catgambar'=>$hasil22['file_name'],
-													'products_cat_meta_desk'=>$this->input->post('products_cat_meta_desk'),
-													'products_cat_keyword'=>$tag);
+													'templates_cat_post_oleh'=>$this->session->username,
+													'templates_cat_judul'=>$this->db->escape_str($this->input->post('templates_cat_judul')),
+													'templates_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_cat_judul')),
+													'templates_cat_desk'=>$this->input->post('templates_cat_desk'),
+													'templates_cat_post_hari'=>hari_ini(date('w')),
+													'templates_cat_post_tanggal'=>date('Y-m-d'),
+													'templates_cat_post_jam'=>date('H:i:s'),
+													'templates_cat_dibaca'=>'0',
+													'templates_cat_status'=>'publish',
+													'templates_catgambar'=>$hasil22['file_name'],
+													'templates_cat_meta_desk'=>$this->input->post('templates_cat_meta_desk'),
+													'templates_cat_keyword'=>$tag);
 												}
-								$this->As_m->insert('products_category',$data);
-								redirect('aspanel/products_cat');
+								$this->As_m->insert('templates_category',$data);
+								redirect('aspanel/templates_cat');
 				}else{
 					$data['karyawan_menu_open']   = '';
 					$data['home_stat']   = '';
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -1643,38 +1643,38 @@ class Aspanel extends CI_Controller {
 					$data['services']   = '';
 
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
-					$this->load->view('backend/products_cat/v_tambahkan', $data);
+					$this->load->view('backend/templates_cat/v_tambahkan', $data);
 				}
 	}
-	public function products_cat_update()
+	public function templates_cat_update()
 	{
 
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
 
-			$config['upload_path'] = 'bahan/foto_products/';
+			$config['upload_path'] = 'bahan/foto_templates/';
 			$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
 			$this->upload->initialize($config);
 			$this->upload->do_upload('gambar');
 			$hasil22=$this->upload->data();
 			$config['image_library']='gd2';
-			$config['source_image'] = './bahan/foto_products/'.$hasil22['file_name'];
+			$config['source_image'] = './bahan/foto_templates/'.$hasil22['file_name'];
 			$config['create_thumb']= FALSE;
 			$config['maintain_ratio']= FALSE;
 			$config['quality']= '100%';
 			$config['width']= 150;
 			$config['height']= 150;
-			$config['new_image']= './bahan/foto_products/'.$hasil22['file_name'];
+			$config['new_image']= './bahan/foto_templates/'.$hasil22['file_name'];
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();
 
-			if ($this->input->post('products_cat_keyword')!=''){
-						$tag_seo = $this->input->post('products_cat_keyword');
+			if ($this->input->post('templates_cat_keyword')!=''){
+						$tag_seo = $this->input->post('templates_cat_keyword');
 						$tag=implode(',',$tag_seo);
 				}else{
 						$tag = '';
 				}
-			$tag = $this->input->post('products_cat_keyword');
+			$tag = $this->input->post('templates_cat_keyword');
 			$tags = explode(",", $tag);
 			$tags2 = array();
 			foreach($tags as $t)
@@ -1693,43 +1693,43 @@ class Aspanel extends CI_Controller {
 			$tags = implode(",", $tags2);
 						if ($hasil22['file_name']==''){
 										$data = array(
-											'products_cat_update_oleh'=>$this->session->username,
-											'products_cat_judul'=>$this->db->escape_str($this->input->post('products_cat_judul')),
-											'products_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_cat_judul')),
-											'products_cat_desk'=>$this->input->post('products_cat_desk'),
-											'products_cat_update_hari'=>hari_ini(date('w')),
-											'products_cat_update_tanggal'=>date('Y-m-d'),
-											'products_cat_update_jam'=>date('H:i:s'),
-											'products_cat_meta_desk'=>$this->input->post('products_cat_meta_desk'),
-											'products_cat_keyword'=>$tag);
-											$where = array('products_cat_id' => $this->input->post('products_cat_id'));
-											$this->db->update('products_category', $data, $where);
+											'templates_cat_update_oleh'=>$this->session->username,
+											'templates_cat_judul'=>$this->db->escape_str($this->input->post('templates_cat_judul')),
+											'templates_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_cat_judul')),
+											'templates_cat_desk'=>$this->input->post('templates_cat_desk'),
+											'templates_cat_update_hari'=>hari_ini(date('w')),
+											'templates_cat_update_tanggal'=>date('Y-m-d'),
+											'templates_cat_update_jam'=>date('H:i:s'),
+											'templates_cat_meta_desk'=>$this->input->post('templates_cat_meta_desk'),
+											'templates_cat_keyword'=>$tag);
+											$where = array('templates_cat_id' => $this->input->post('templates_cat_id'));
+											$this->db->update('templates_category', $data, $where);
 						}else{
 										$data = array(
-											'products_cat_update_oleh'=>$this->session->username,
-											'products_cat_judul'=>$this->db->escape_str($this->input->post('products_cat_judul')),
-											'products_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_cat_judul')),
-											'products_cat_desk'=>$this->input->post('products_cat_desk'),
-											'products_cat_update_hari'=>hari_ini(date('w')),
-											'products_cat_update_tanggal'=>date('Y-m-d'),
-											'products_cat_update_jam'=>date('H:i:s'),
-											'products_cat_gambar'=>$hasil22['file_name'],
-											'products_cat_meta_desk'=>$this->input->post('products_cat_meta_desk'),
-											'products_cat_keyword'=>$tag);
-											$where = array('products_cat_id' => $this->input->post('products_cat_id'));
-											$_image = $this->db->get_where('products_category',$where)->row();
-											$query = $this->db->update('products_category',$data,$where);
+											'templates_cat_update_oleh'=>$this->session->username,
+											'templates_cat_judul'=>$this->db->escape_str($this->input->post('templates_cat_judul')),
+											'templates_cat_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_cat_judul')),
+											'templates_cat_desk'=>$this->input->post('templates_cat_desk'),
+											'templates_cat_update_hari'=>hari_ini(date('w')),
+											'templates_cat_update_tanggal'=>date('Y-m-d'),
+											'templates_cat_update_jam'=>date('H:i:s'),
+											'templates_cat_gambar'=>$hasil22['file_name'],
+											'templates_cat_meta_desk'=>$this->input->post('templates_cat_meta_desk'),
+											'templates_cat_keyword'=>$tag);
+											$where = array('templates_cat_id' => $this->input->post('templates_cat_id'));
+											$_image = $this->db->get_where('templates_category',$where)->row();
+											$query = $this->db->update('templates_category',$data,$where);
 											if($query){
-												unlink("bahan/foto_products/".$_image->products_cat_gambar);
+												unlink("bahan/foto_templates/".$_image->templates_cat_gambar);
 											}
 
 						}
-						redirect('aspanel/products_cat');
+						redirect('aspanel/templates_cat');
 		}else{
 			if ($this->session->level=='1'){
-					 $proses = $this->As_m->edit('products_category', array('products_cat_id' => $id))->row_array();
+					 $proses = $this->As_m->edit('templates_category', array('templates_cat_id' => $id))->row_array();
 			}else{
-					$proses = $this->As_m->edit('products_category', array('products_cat_id' => $id, 'products_cat_post_oleh' => $this->session->username))->row_array();
+					$proses = $this->As_m->edit('templates_category', array('templates_cat_id' => $id, 'templates_cat_post_oleh' => $this->session->username))->row_array();
 			}
 			$data = array('rows' => $proses);
 			$data['karyawan_menu_open']   = '';
@@ -1737,8 +1737,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = 'active';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = 'active';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -1756,46 +1756,46 @@ class Aspanel extends CI_Controller {
 				$data['produk']   = '';
 				$data['services']   = '';
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
-			$this->load->view('backend/products_cat/v_update', $data);
+			$this->load->view('backend/templates_cat/v_update', $data);
 		}
 	}
-	function products_cat_delete_temp()
+	function templates_cat_delete_temp()
 	{
-			$data = array('products_cat_status'=>'delete');
-			$where = array('products_cat_id' => $this->uri->segment(3));
-			$this->db->update('products_category', $data, $where);
-			redirect('aspanel/products_cat');
+			$data = array('templates_cat_status'=>'delete');
+			$where = array('templates_cat_id' => $this->uri->segment(3));
+			$this->db->update('templates_category', $data, $where);
+			redirect('aspanel/templates_cat');
 	}
-	function products_cat_restore()
+	function templates_cat_restore()
 	{
-			$data = array('products_cat_status'=>'Publish');
-			$where = array('products_cat_id' => $this->uri->segment(3));
-			$this->db->update('products_category', $data, $where);
-			redirect('aspanel/products_cat_storage_bin');
+			$data = array('templates_cat_status'=>'Publish');
+			$where = array('templates_cat_id' => $this->uri->segment(3));
+			$this->db->update('templates_category', $data, $where);
+			redirect('aspanel/templates_cat_storage_bin');
 	}
-	public function products_cat_delete()
+	public function templates_cat_delete()
 	{
-			cek_session_akses ('products_cat',$this->session->id_session);
+			cek_session_akses ('templates_cat',$this->session->id_session);
 			$id = $this->uri->segment(3);
-			$_id = $this->db->get_where('products_category',['products_cat_id' => $id])->row();
-			 $query = $this->db->delete('products_category',['products_cat_id'=>$id]);
+			$_id = $this->db->get_where('templates_category',['templates_cat_id' => $id])->row();
+			 $query = $this->db->delete('templates_category',['templates_cat_id'=>$id]);
 			if($query){
-							 unlink("./bahan/foto_products/".$_id->products_cat_gambar);
+							 unlink("./bahan/foto_templates/".$_id->templates_cat_gambar);
 		 }
-		redirect('aspanel/products_cat_storage_bin');
+		redirect('aspanel/templates_cat_storage_bin');
 	}
 	/*	Bagian untuk Product Category - Penutup	*/
 
 	/*	Bagian untuk Product - Pembuka	*/
-	public function products()
+	public function templates()
 	{
 		 $data['karyawan_menu_open']   = '';
  		$data['home_stat']   = '';
  		$data['identitas_stat']   = '';
  		$data['profil_stat']   = '';
  		$data['sliders_stat']   = '';
- 		$data['products_stat']   = '';
- 		$data['cat_products_stat']   = '';
+ 		$data['templates_stat']   = '';
+ 		$data['cat_templates_stat']   = '';
  		$data['slider_stat']   = '';
  		$data['blogs_stat']   = '';
  		$data['message_stat']   = '';
@@ -1813,21 +1813,21 @@ class Aspanel extends CI_Controller {
  			$data['produk']   = 'active';
  			$data['services']   = '';
 				if ($this->session->level=='1'){
-						$data['record'] = $this->Crud_m->view_where_ordering('products',array('products_status'=>'publish'),'products_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_status'=>'publish'),'templates_id','DESC');
 				}else{
-						$data['record'] = $this->Crud_m->view_where_ordering('products',array('products_post_oleh'=>$this->session->username,'products_status'=>'publish'),'products_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_post_oleh'=>$this->session->username,'templates_status'=>'publish'),'templates_id','DESC');
 				}
-				$this->load->view('backend/products/v_daftar', $data);
+				$this->load->view('backend/templates/v_daftar', $data);
 	}
-	public function products_storage_bin()
+	public function templates_storage_bin()
 	{
 		$data['karyawan_menu_open']   = '';
 		$data['home_stat']   = '';
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -1838,13 +1838,13 @@ class Aspanel extends CI_Controller {
 		$data['services']   = '';
 
 				if ($this->session->level=='1'){
-						$data['record'] = $this->Crud_m->view_where_ordering('products',array('products_status'=>'delete'),'products_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_status'=>'delete'),'templates_id','DESC');
 				}else{
-						$data['record'] = $this->Crud_m->view_where_ordering('products',array('products_post_oleh'=>$this->session->username,'products_status'=>'delete'),'products_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_post_oleh'=>$this->session->username,'templates_status'=>'delete'),'templates_id','DESC');
 				}
-				$this->load->view('backend/products/v_daftar_hapus', $data);
+				$this->load->view('backend/templates/v_daftar_hapus', $data);
 	}
-	public function products_tambahkan()
+	public function templates_tambahkan()
 	{
 		if (isset($_POST['submit'])){
 
@@ -1863,13 +1863,13 @@ class Aspanel extends CI_Controller {
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
 
-					if ($this->input->post('products_keyword')!=''){
-								$tag_seo = $this->input->post('products_keyword');
+					if ($this->input->post('templates_keyword')!=''){
+								$tag_seo = $this->input->post('templates_keyword');
 								$tag=implode(',',$tag_seo);
 						}else{
 								$tag = '';
 						}
-					$tag = $this->input->post('products_keyword');
+					$tag = $this->input->post('templates_keyword');
 					$tags = explode(",", $tag);
 					$tags2 = array();
 					foreach($tags as $t)
@@ -1888,45 +1888,45 @@ class Aspanel extends CI_Controller {
 					$tags = implode(",", $tags2);
 					if ($hasil22['file_name']=='' ){
 									$data = array(
-													'products_post_oleh'=>$this->session->username,
-													'products_judul'=>$this->db->escape_str($this->input->post('products_judul')),
-													'products_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_judul')),
-													'products_desk'=>$this->input->post('products_desk'),
-													'products_cat_id'=>$this->input->post('products_cat_id'),
-													'products_post_hari'=>hari_ini(date('w')),
-													'products_post_tanggal'=>date('Y-m-d'),
-													'products_post_jam'=>date('H:i:s'),
-													'products_dibaca'=>'0',
-													'products_status'=>'publish',
-													'products_meta_desk'=>$this->input->post('products_meta_desk'),
-													'products_keyword'=>$tag);
+													'templates_post_oleh'=>$this->session->username,
+													'templates_judul'=>$this->db->escape_str($this->input->post('templates_judul')),
+													'templates_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_judul')),
+													'templates_desk'=>$this->input->post('templates_desk'),
+													'templates_cat_id'=>$this->input->post('templates_cat_id'),
+													'templates_post_hari'=>hari_ini(date('w')),
+													'templates_post_tanggal'=>date('Y-m-d'),
+													'templates_post_jam'=>date('H:i:s'),
+													'templates_dibaca'=>'0',
+													'templates_status'=>'publish',
+													'templates_meta_desk'=>$this->input->post('templates_meta_desk'),
+													'templates_keyword'=>$tag);
 
 												}else {
 												$data = array(
-													'products_post_oleh'=>$this->session->username,
-													'products_judul'=>$this->db->escape_str($this->input->post('products_judul')),
-													'products_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_judul')),
-													'products_desk'=>$this->input->post('products_desk'),
-													'products_cat_id'=>$this->input->post('products_cat_id'),
-													'products_post_hari'=>hari_ini(date('w')),
-													'products_post_tanggal'=>date('Y-m-d'),
-													'products_post_jam'=>date('H:i:s'),
-													'products_dibaca'=>'0',
-													'products_status'=>'publish',
-													'products_gambar'=>$hasil22['file_name'],
-													'products_meta_desk'=>$this->input->post('products_meta_desk'),
-													'products_keyword'=>$tag);
+													'templates_post_oleh'=>$this->session->username,
+													'templates_judul'=>$this->db->escape_str($this->input->post('templates_judul')),
+													'templates_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_judul')),
+													'templates_desk'=>$this->input->post('templates_desk'),
+													'templates_cat_id'=>$this->input->post('templates_cat_id'),
+													'templates_post_hari'=>hari_ini(date('w')),
+													'templates_post_tanggal'=>date('Y-m-d'),
+													'templates_post_jam'=>date('H:i:s'),
+													'templates_dibaca'=>'0',
+													'templates_status'=>'publish',
+													'templates_gambar'=>$hasil22['file_name'],
+													'templates_meta_desk'=>$this->input->post('templates_meta_desk'),
+													'templates_keyword'=>$tag);
 												}
-								$this->As_m->insert('products',$data);
-								redirect('aspanel/products');
+								$this->As_m->insert('templates',$data);
+								redirect('aspanel/templates');
 				}else{
 					$data['karyawan_menu_open']   = '';
 					$data['home_stat']   = '';
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -1936,12 +1936,12 @@ class Aspanel extends CI_Controller {
 		 			$data['produk_category']   = '';
 		 			$data['produk']   = 'active';
 		 			$data['services']   = '';
-					$data['records'] = $this->Crud_m->view_ordering('products_category','products_cat_id','DESC');
+					$data['records'] = $this->Crud_m->view_ordering('templates_category','templates_cat_id','DESC');
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
-					$this->load->view('backend/products/v_tambahkan', $data);
+					$this->load->view('backend/templates/v_tambahkan', $data);
 				}
 	}
-	public function products_update()
+	public function templates_update()
 	{
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
@@ -1960,13 +1960,13 @@ class Aspanel extends CI_Controller {
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();
 
-			if ($this->input->post('products_keyword')!=''){
-						$tag_seo = $this->input->post('products_keyword');
+			if ($this->input->post('templates_keyword')!=''){
+						$tag_seo = $this->input->post('templates_keyword');
 						$tag=implode(',',$tag_seo);
 				}else{
 						$tag = '';
 				}
-			$tag = $this->input->post('products_keyword');
+			$tag = $this->input->post('templates_keyword');
 			$tags = explode(",", $tag);
 			$tags2 = array();
 			foreach($tags as $t)
@@ -1985,44 +1985,44 @@ class Aspanel extends CI_Controller {
 			$tags = implode(",", $tags2);
 						if ($hasil22['file_name']==''){
 										$data = array(
-											'products_update_oleh'=>$this->session->username,
-											'products_judul'=>$this->db->escape_str($this->input->post('products_judul')),
-											'products_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_judul')),
-											'products_desk'=>$this->input->post('products_desk'),
-											'products_cat_id'=>$this->input->post('products_cat_id'),
-											'products_update_hari'=>hari_ini(date('w')),
-											'products_update_tanggal'=>date('Y-m-d'),
-											'products_update_jam'=>date('H:i:s'),
-											'products_meta_desk'=>$this->input->post('products_meta_desk'),
-											'products_keyword'=>$tag);
-											$where = array('products_id' => $this->input->post('products_id'));
-							 				$this->db->update('products', $data, $where);
+											'templates_update_oleh'=>$this->session->username,
+											'templates_judul'=>$this->db->escape_str($this->input->post('templates_judul')),
+											'templates_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_judul')),
+											'templates_desk'=>$this->input->post('templates_desk'),
+											'templates_cat_id'=>$this->input->post('templates_cat_id'),
+											'templates_update_hari'=>hari_ini(date('w')),
+											'templates_update_tanggal'=>date('Y-m-d'),
+											'templates_update_jam'=>date('H:i:s'),
+											'templates_meta_desk'=>$this->input->post('templates_meta_desk'),
+											'templates_keyword'=>$tag);
+											$where = array('templates_id' => $this->input->post('templates_id'));
+							 				$this->db->update('templates', $data, $where);
 						}else{
 										$data = array(
-											'products_update_oleh'=>$this->session->username,
-											'products_judul'=>$this->db->escape_str($this->input->post('products_judul')),
-											'products_judul_seo'=>$this->mylibrary->seo_title($this->input->post('products_judul')),
-											'products_desk'=>$this->input->post('products_desk'),
-											'products_cat_id'=>$this->input->post('products_cat_id'),
-											'products_update_hari'=>hari_ini(date('w')),
-											'products_update_tanggal'=>date('Y-m-d'),
-											'products_update_jam'=>date('H:i:s'),
-											'products_gambar'=>$hasil22['file_name'],
-											'products_meta_desk'=>$this->input->post('products_meta_desk'),
-											'products_keyword'=>$tag);
-											$where = array('products_id' => $this->input->post('products_id'));
-											$_image = $this->db->get_where('products',$where)->row();
-											$query = $this->db->update('products',$data,$where);
+											'templates_update_oleh'=>$this->session->username,
+											'templates_judul'=>$this->db->escape_str($this->input->post('templates_judul')),
+											'templates_judul_seo'=>$this->mylibrary->seo_title($this->input->post('templates_judul')),
+											'templates_desk'=>$this->input->post('templates_desk'),
+											'templates_cat_id'=>$this->input->post('templates_cat_id'),
+											'templates_update_hari'=>hari_ini(date('w')),
+											'templates_update_tanggal'=>date('Y-m-d'),
+											'templates_update_jam'=>date('H:i:s'),
+											'templates_gambar'=>$hasil22['file_name'],
+											'templates_meta_desk'=>$this->input->post('templates_meta_desk'),
+											'templates_keyword'=>$tag);
+											$where = array('templates_id' => $this->input->post('templates_id'));
+											$_image = $this->db->get_where('templates',$where)->row();
+											$query = $this->db->update('templates',$data,$where);
 											if($query){
-												unlink("assets/frontend/produk/".$_image->products_gambar);
+												unlink("assets/frontend/produk/".$_image->templates_gambar);
 											}
 						}
-						redirect('aspanel/products');
+						redirect('aspanel/templates');
 		}else{
 			if ($this->session->level=='1'){
-					 $proses = $this->As_m->edit('products', array('products_judul_seo' => $id))->row_array();
+					 $proses = $this->As_m->edit('templates', array('templates_judul_seo' => $id))->row_array();
 			}else{
-					$proses = $this->As_m->edit('products', array('products_judul_seo' => $id, 'products_post_oleh' => $this->session->username))->row_array();
+					$proses = $this->As_m->edit('templates', array('templates_judul_seo' => $id, 'templates_post_oleh' => $this->session->username))->row_array();
 			}
 			$data = array('rows' => $proses);
 			$data['karyawan_menu_open']   = '';
@@ -2030,8 +2030,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -2041,35 +2041,35 @@ class Aspanel extends CI_Controller {
  			$data['produk_category']   = '';
  			$data['produk']   = 'active';
  			$data['services']   = '';
-			$data['records'] = $this->Crud_m->view_ordering('products_category','products_cat_id','ASC');
+			$data['records'] = $this->Crud_m->view_ordering('templates_category','templates_cat_id','ASC');
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
-			$this->load->view('backend/products/v_update', $data);
+			$this->load->view('backend/templates/v_update', $data);
 		}
 	}
-	function products_delete_temp()
+	function templates_delete_temp()
 	{
-			$data = array('products_status'=>'delete');
-      $where = array('products_id' => $this->uri->segment(3));
-			$this->db->update('products', $data, $where);
-			redirect('aspanel/products');
+			$data = array('templates_status'=>'delete');
+      $where = array('templates_id' => $this->uri->segment(3));
+			$this->db->update('templates', $data, $where);
+			redirect('aspanel/templates');
 	}
-	function products_restore()
+	function templates_restore()
 	{
-			$data = array('products_status'=>'Publish');
-      $where = array('products_id' => $this->uri->segment(3));
-			$this->db->update('products', $data, $where);
-			redirect('aspanel/products_storage_bin');
+			$data = array('templates_status'=>'Publish');
+      $where = array('templates_id' => $this->uri->segment(3));
+			$this->db->update('templates', $data, $where);
+			redirect('aspanel/templates_storage_bin');
 	}
-	public function products_delete()
+	public function templates_delete()
 	{
-			cek_session_akses ('products',$this->session->id_session);
+			cek_session_akses ('templates',$this->session->id_session);
 			$id = $this->uri->segment(3);
-			$_id = $this->db->get_where('products',['products_id' => $id])->row();
-			 $query = $this->db->delete('products',['products_id'=>$id]);
+			$_id = $this->db->get_where('templates',['templates_id' => $id])->row();
+			 $query = $this->db->delete('templates',['templates_id'=>$id]);
 		 	if($query){
-							 unlink("./assets/frontend/produk/".$_id->products_gambar);
+							 unlink("./assets/frontend/produk/".$_id->templates_gambar);
 		 }
-		redirect('aspanel/products_storage_bin');
+		redirect('aspanel/templates_storage_bin');
 	}
 
 	/*	Bagian untuk Product - Penutup	*/
@@ -2083,8 +2083,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = 'active';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = 'active';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = 'active';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -2111,8 +2111,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = 'active';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = 'active';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = 'active';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -2205,8 +2205,8 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = 'active';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = 'active';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = 'active';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -2405,8 +2405,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = 'active';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = 'active';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = 'active';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -2460,7 +2460,7 @@ class Aspanel extends CI_Controller {
 
 
 
-	/*	Bagian untuk products cat - Pembuka	*/
+	/*	Bagian untuk templates cat - Pembuka	*/
 	public function services()
 	{
 		$data['karyawan_menu_open']   = '';
@@ -2468,8 +2468,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -2500,8 +2500,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = '';
@@ -2529,17 +2529,17 @@ class Aspanel extends CI_Controller {
 	{
 		if (isset($_POST['submit'])){
 
-					$config['upload_path'] = 'bahan/foto_products/';
+					$config['upload_path'] = 'bahan/foto_templates/';
 					$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
 					$this->upload->initialize($config);
 					$this->upload->do_upload('gambar');
 					$hasil22=$this->upload->data();
 					$config['image_library']='gd2';
-					$config['source_image'] = './bahan/foto_products/'.$hasil22['file_name'];
+					$config['source_image'] = './bahan/foto_templates/'.$hasil22['file_name'];
 					$config['create_thumb']= FALSE;
 					$config['maintain_ratio']= FALSE;
 					$config['quality']= '80%';
-					$config['new_image']= './bahan/foto_products/'.$hasil22['file_name'];
+					$config['new_image']= './bahan/foto_templates/'.$hasil22['file_name'];
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
 
@@ -2606,8 +2606,8 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
 					$data['message_stat']   = '';
@@ -2634,17 +2634,17 @@ class Aspanel extends CI_Controller {
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
 
-			$config['upload_path'] = 'bahan/foto_products/';
+			$config['upload_path'] = 'bahan/foto_templates/';
 			$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
 			$this->upload->initialize($config);
 			$this->upload->do_upload('gambar');
 			$hasil22=$this->upload->data();
 			$config['image_library']='gd2';
-			$config['source_image'] = './bahan/foto_products/'.$hasil22['file_name'];
+			$config['source_image'] = './bahan/foto_templates/'.$hasil22['file_name'];
 			$config['create_thumb']= FALSE;
 			$config['maintain_ratio']= FALSE;
 			$config['quality']= '80%';
-			$config['new_image']= './bahan/foto_products/'.$hasil22['file_name'];
+			$config['new_image']= './bahan/foto_templates/'.$hasil22['file_name'];
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();
 
@@ -2704,7 +2704,7 @@ class Aspanel extends CI_Controller {
 											$_image = $this->db->get_where('services',$where)->row();
 											$query = $this->db->update('services',$data,$where);
 											if($query){
-												unlink("bahan/foto_products/".$_image->services_gambar);
+												unlink("bahan/foto_templates/".$_image->services_gambar);
 											}
 
 						}
@@ -2721,8 +2721,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = '';
@@ -2765,7 +2765,7 @@ class Aspanel extends CI_Controller {
 			$_id = $this->db->get_where('services',['services_id' => $id])->row();
 			 $query = $this->db->delete('services',['services_id'=>$id]);
 			if($query){
-							 unlink("./bahan/foto_products/".$_id->bisnis_gambar);
+							 unlink("./bahan/foto_templates/".$_id->bisnis_gambar);
 		 }
 		redirect('aspanel/services_storage_bin');
 	}
@@ -2781,8 +2781,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = 'active';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = 'active';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = 'active';
@@ -2805,8 +2805,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = 'active';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = 'active';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = '';
 		$data['message_stat']   = 'active';
@@ -2848,10 +2848,10 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
+					$data['templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = '';
-					$data['cat_products_stat']   = 'active';
+					$data['cat_templates_stat']   = 'active';
 					$data['message_stat']   = 'active';
 					$data['gallery_stat']   = ''; 		$data['kehadiran_menu_open']   = ''; 	    $data['jamkerja_stat']   = ''; 	    $data['absen_stat']   = ''; 	    $data['dataabsen_stat']   = ''; 	    $data['cuti_stat']   = ''; 	    $data['gaji_stat']   = ''; 	    $data['pengumuman_stat']   = ''; 	    $data['konfig_stat']   = '';
 					$data['produk_menu_open']   = '';
@@ -2893,8 +2893,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = 'active';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = 'active';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = '';
 			$data['message_stat']   = 'active';
@@ -2931,7 +2931,7 @@ class Aspanel extends CI_Controller {
 			$_id = $this->db->get_where('divisi',['divisi_id' => $id])->row();
 			 $query = $this->db->delete('divisi',['divisi_id'=>$id]);
 		 	if($query){
-							 unlink("./bahan/foto_products/".$_id->divisi_gambar);
+							 unlink("./bahan/foto_templates/".$_id->divisi_gambar);
 		 }
 		redirect('aspanel/divisi_storage_bin');
 	}
@@ -2945,8 +2945,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = 'active';
 		$data['message_stat']   = '';
@@ -2980,8 +2980,8 @@ class Aspanel extends CI_Controller {
 		$data['identitas_stat']   = '';
 		$data['profil_stat']   = '';
 		$data['sliders_stat']   = '';
-		$data['products_stat']   = '';
-		$data['cat_products_stat']   = '';
+		$data['templates_stat']   = '';
+		$data['cat_templates_stat']   = '';
 		$data['slider_stat']   = '';
 		$data['blogs_stat']   = 'active';
 		$data['message_stat']   = '';
@@ -3085,8 +3085,8 @@ class Aspanel extends CI_Controller {
 					$data['identitas_stat']   = '';
 					$data['profil_stat']   = '';
 					$data['sliders_stat']   = '';
-					$data['products_stat']   = '';
-					$data['cat_products_stat']   = '';
+					$data['templates_stat']   = '';
+					$data['cat_templates_stat']   = '';
 					$data['slider_stat']   = '';
 					$data['blogs_stat']   = 'active';
 					$data['message_stat']   = '';
@@ -3200,8 +3200,8 @@ class Aspanel extends CI_Controller {
 			$data['identitas_stat']   = '';
 			$data['profil_stat']   = '';
 			$data['sliders_stat']   = '';
-			$data['products_stat']   = '';
-			$data['cat_products_stat']   = '';
+			$data['templates_stat']   = '';
+			$data['cat_templates_stat']   = '';
 			$data['slider_stat']   = '';
 			$data['blogs_stat']   = 'active';
 			$data['message_stat']   = '';

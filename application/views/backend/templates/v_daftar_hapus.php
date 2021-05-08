@@ -6,13 +6,13 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>List Bisnis Storage Bin</h1>
+          <h1>Sampah</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?php echo base_url()?>">Home</a></li>
-            <li class="breadcrumb-item active"><a href="<?php echo base_url()?>bisnis">List Bisnis</a></li>
-            <li class="breadcrumb-item active">List Bisnis Storage Bin</li>
+            <li class="breadcrumb-item active"><a href="<?php echo base_url()?>templates">Daftar Produk</a></li>
+            <li class="breadcrumb-item active">Sampah</li>
           </ol>
         </div>
       </div>
@@ -24,7 +24,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/bisnis">Back List Bisnis</a></h3>
+              <h3 class="card-title"><a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/templates">Kembali</a></h3>
             </div>
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
@@ -39,16 +39,16 @@
                 <?php
                 $no = 1;
                 foreach ($record as $row){
-                  $tgl_posting = $this->mylibrary->tgl_indo($row['bisnis_post_tanggal']);
+                  $tgl_posting = $this->mylibrary->tgl_indo($row['templates_post_tanggal']);
                   ?>
 
                 <tr>
                   <td><?=$tgl_posting?></td>
-                  <td><?=$row['bisnis_judul']?></td>
+                  <td><?=$row['templates_judul']?></td>
                   <td>
                     <?php
-                    echo"<a class='btn btn-primary btn-sm' title='Edit Data' href='".base_url()."aspanel/bisnis_restore/$row[bisnis_id]'>Restore</a>
-                    <a class='btn btn-danger btn-sm' title='Permanently Delete' href='".base_url()."aspanel/bisnis_delete/$row[bisnis_id]' onclick=\"return confirm('Are you sure want to permanently delete this data?')\"><i class='fas fa-trash-alt'></i></a>";
+                    echo"<a class='btn btn-primary btn-sm' title='Edit Data' href='".base_url()."aspanel/templates_restore/$row[templates_id]'>Restore</a>
+                    <a class='btn btn-danger btn-sm' title='Permanently Delete' href='".base_url()."aspanel/templates_delete/$row[templates_id]' onclick=\"return confirm('Are you sure want to permanently delete this data?')\"><i class='fas fa-trash-alt'></i></a>";
                     ?>
                   </td>
                 </tr>

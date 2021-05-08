@@ -98,10 +98,10 @@
         <?php } ?>
 
         <li class="nav-item">
-          <a href="<?php echo base_url(); ?>aspanel/products" class="nav-link" >
+          <a href="<?php echo base_url(); ?>aspanel/templates" class="nav-link" >
             <i class="nav-icon fas fa-cogs"></i>
             <p>
-              Produk
+              Templates
             </p>
           </a>
         </li>
@@ -117,7 +117,7 @@
           <a href="<?php echo base_url(); ?>aspanel/bisnis" class="nav-link " >
             <i class="nav-icon fas fa-cogs"></i>
             <p>
-              Bisnis
+              Klien
             </p>
           </a>
         </li>

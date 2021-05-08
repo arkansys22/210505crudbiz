@@ -6,13 +6,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Sampah</h1>
+          <h1>List Category templates</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?php echo base_url()?>">Home</a></li>
-            <li class="breadcrumb-item active"><a href="<?php echo base_url()?>products">Daftar Produk</a></li>
-            <li class="breadcrumb-item active">Sampah</li>
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">List Category templates</li>
           </ol>
         </div>
       </div>
@@ -24,7 +23,8 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/products">Kembali</a></h3>
+              <h3 class="card-title"><a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/templates_cat_tambahkan"><i class="fas fa-plus-circle"></i> Add Category</a></h3>
+              <h3 class="text-right"><a class="btn btn-danger btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/templates_cat_storage_bin"><i class="fas fa-trash"></i> Storage Bin</a></h3>
             </div>
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
@@ -39,16 +39,16 @@
                 <?php
                 $no = 1;
                 foreach ($record as $row){
-                  $tgl_posting = $this->mylibrary->tgl_indo($row['products_post_tanggal']);
+                  $tgl_posting = $this->mylibrary->tgl_indo($row['templates_cat_post_tanggal']);
                   ?>
 
                 <tr>
                   <td><?=$tgl_posting?></td>
-                  <td><?=$row['products_judul']?></td>
+                  <td><?=$row['templates_cat_judul']?></td>
                   <td>
                     <?php
-                    echo"<a class='btn btn-primary btn-sm' title='Edit Data' href='".base_url()."aspanel/products_restore/$row[products_id]'>Restore</a>
-                    <a class='btn btn-danger btn-sm' title='Permanently Delete' href='".base_url()."aspanel/products_delete/$row[products_id]' onclick=\"return confirm('Are you sure want to permanently delete this data?')\"><i class='fas fa-trash-alt'></i></a>";
+                    echo"<a class='btn btn-primary btn-sm' title='Edit Data' href='".base_url()."aspanel/templates_cat_update/$row[templates_cat_id]'><i class='fas fa-edit'></i></a>
+                    <a class='btn btn-danger btn-sm' title='Delete Data' href='".base_url()."aspanel/templates_cat_delete_temp/$row[templates_cat_id]' onclick=\"return confirm('Are you sure want to delete this data?')\"><i class='fas fa-trash-alt'></i></a>";
                     ?>
                   </td>
                 </tr>

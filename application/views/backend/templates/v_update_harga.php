@@ -14,7 +14,7 @@
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?php echo base_url()?>aspanel/products">Products</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo base_url()?>aspanel/templates">templates</a></li>
             <li class="breadcrumb-item active">Update Diskon</li>
           </ol>
         </div>
@@ -34,22 +34,22 @@
             <!-- /.card-header -->
             <!-- form start -->
             <?php $attributes = array('class'=>'form-horizontal','role'=>'form');
-            echo form_open_multipart('aspanel/products_disc',$attributes); ?>
+            echo form_open_multipart('aspanel/templates_disc',$attributes); ?>
 
 
               <div class="card-body">
                 <div class="form-group">
-                  <input type="hidden" name="products_id" value="<?php echo $rows['products_id'] ?>">
+                  <input type="hidden" name="templates_id" value="<?php echo $rows['templates_id'] ?>">
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" name="products_judul" value="<?php echo $rows['products_judul'] ?>" disabled>
+                        <input type="text" class="form-control" name="templates_judul" value="<?php echo $rows['templates_judul'] ?>" disabled>
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <img class="img-fluid mb-3" src="<?php echo base_url()?>bahan/foto_products/<?php echo $rows['products_gambar'] ?>" alt="Photo">
+                        <img class="img-fluid mb-3" src="<?php echo base_url()?>bahan/foto_templates/<?php echo $rows['templates_gambar'] ?>" alt="Photo">
                       </div>
                     </div>
                   </div>
@@ -58,7 +58,7 @@
                       <div class="form-group">
                         <label>Persentase Diskon</label>
                         <div class="input-group mb-3">
-                          <input type="text" class="form-control" name="products_harga_disc" value="<?php echo $rows['products_harga_disc'] ?>">
+                          <input type="text" class="form-control" name="templates_harga_disc" value="<?php echo $rows['templates_harga_disc'] ?>">
                           <div class="input-group-append">
                             <span class="input-group-text">%</span>
                           </div>
@@ -68,15 +68,15 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Berakhir Pada</label>
-                        <input type="date" class="form-control" name="products_disc_end" value="<?php echo $rows['products_disc_end'] ?>">
+                        <input type="date" class="form-control" name="templates_disc_end" value="<?php echo $rows['templates_disc_end'] ?>">
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="form-group">
                           <label>Hot Promo</label>
-                          <select class="form-control" name="products_disc_status">
-                            <option value="<?php echo $rows['products_disc_status'] ?>" selected="selected"><?php echo $rows['products_disc_status'] ?></option>
-                            <?php if($rows['products_disc_status']== 'PROMO'){
+                          <select class="form-control" name="templates_disc_status">
+                            <option value="<?php echo $rows['templates_disc_status'] ?>" selected="selected"><?php echo $rows['templates_disc_status'] ?></option>
+                            <?php if($rows['templates_disc_status']== 'PROMO'){
                               echo"<option value='NON PROMO'>NON PROMO</option>";
                             }else{
                               echo"<option value='PROMO'>PROMO</option>";
@@ -89,7 +89,7 @@
               </div>
               <div class="card-footer">
                 <button type="submit" name ="submit" class="btn btn-success" title="Update Blog"><i class="fas fa-file-upload"></i> Update</button>
-                <a class="btn btn-primary" title="Batal" href="<?php echo base_url()?>aspanel/products"><i class="fab fa-creative-commons-sa"></i> Cancel</a>
+                <a class="btn btn-primary" title="Batal" href="<?php echo base_url()?>aspanel/templates"><i class="fab fa-creative-commons-sa"></i> Cancel</a>
 
               </div>
             <?php echo form_close(); ?>

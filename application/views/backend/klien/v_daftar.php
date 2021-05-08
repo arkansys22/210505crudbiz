@@ -6,12 +6,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Daftar Produk</h1>
+          <h1>Daftar Klien</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?php echo base_url()?>">Home</a></li>
-            <li class="breadcrumb-item active">Daftar Produk</li>
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Daftar Klien</li>
           </ol>
         </div>
       </div>
@@ -23,19 +23,15 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">
-            <a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/products_tambahkan"><i class="fas fa-plus-circle"></i> Tambah</a>
-        
-              <a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/products_cat"><i class="fas fa-plus-circle"></i> Kategori</a></h3>
-
-              <h3 class="text-right"><a class="btn btn-danger btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/products_storage_bin"><i class="fas fa-trash"></i> File Sampah</a></h3>
+              <h3 class="card-title"><a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/bisnis_tambahkan"><i class="fas fa-plus-circle"></i> Add</a></h3>
+              <h3 class="text-right"><a class="btn btn-danger btn-sm" title="Edit Data" href="<?php echo base_url()?>aspanel/bisnis_storage_bin"><i class="fas fa-trash"></i> Storage Bin</a></h3>
             </div>
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Date</th>
-                  <th>Title</th>
+                  <th>Klien</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -43,17 +39,16 @@
                 <?php
                 $no = 1;
                 foreach ($record as $row){
-                  $tgl_posting = $this->mylibrary->tgl_indo($row['products_post_tanggal']);
+                  $tgl_posting = $this->mylibrary->tgl_indo($row['bisnis_post_tanggal']);
                   ?>
 
                 <tr>
                   <td><?=$tgl_posting?></td>
-                  <td><a href="<?php echo base_url()?>aspanel/products_disc/<?=$row['products_id']?>"></a> <?=$row['products_judul']?></td>
+                  <td><?=$row['bisnis_judul']?></td>
                   <td>
                     <?php
-                    echo"
-                    <a class='btn btn-primary btn-sm' title='Edit Data' href='".base_url()."aspanel/products_update/$row[products_judul_seo]'><i class='fas fa-edit'></i></a>
-                    <a class='btn btn-danger btn-sm' title='Delete Data' href='".base_url()."aspanel/products_delete_temp/$row[products_id]' onclick=\"return confirm('Are you sure want to delete this data?')\"><i class='fas fa-trash-alt'></i></a>";
+                    echo"<a class='btn btn-primary btn-sm' title='Edit Data' href='".base_url()."aspanel/bisnis_update/$row[bisnis_id]'><i class='fas fa-edit'></i></a>
+                    <a class='btn btn-danger btn-sm' title='Delete Data' href='".base_url()."aspanel/bisnis_delete_temp/$row[bisnis_id]' onclick=\"return confirm('Are you sure want to delete this data?')\"><i class='fas fa-trash-alt'></i></a>";
                     ?>
                   </td>
                 </tr>
