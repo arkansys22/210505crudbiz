@@ -27,78 +27,29 @@
 <?php $this->load->view('fronts/css')?>
 </head>
 <body>
-
-<!-- LOADER -->
-<!-- END LOADER -->
-
-<!-- START HEADER -->
-
-<!-- START SECTION HEADER -->
+<?php $this->load->view('fronts/loader.php')?>
 <?php $this->load->view('fronts/header.php')?>
-<!-- END SECTION HEADER -->
-<!-- START HEADER -->
-
-<!-- START SECTION BANNER -->
 <?php $this->load->view('fronts/home/v_slider')?>
-<!-- END SECTION BANNER -->
-
-
-
-<!-- START SECTION ABOUT US -->
 <?php $this->load->view('fronts/home/v_about')?>
-<!-- END SECTION ABOUT US -->
-
-<!-- START SECTION FEATURE -->
-<?php $this->load->view('fronts/home/v_linibisnis')?>
-<!-- END SECTION FEATURE -->
-
-<!-- START SECTION PORTFOLIO -->
+<?php $this->load->view('fronts/home/v_daftar_klien')?>
 <?php $this->load->view('fronts/home/v_portfolio')?>
-<!-- END SECTION PORTFOLIO -->
-
-<!-- START SECTION FEATURE -->
 <?php $this->load->view('fronts/home/v_counter')?>
-<!-- END SECTION FEATURE -->
-
-<!-- START SECTION COUNTER -->
-<!-- END SECTION COUNTER -->
-
-<!-- START SECTION SERVICE -->
 <?php $this->load->view('fronts/home/v_testimonial')?>
-<!-- END SECTION SERVICE -->
+<?php $this->load->view('fronts/home/v_harga')?>
 
-<!-- START SECTION TEAM -->
-<!-- END SECTION TEAM -->
-
-<!-- START SECTION CALL TO ACTION -->
 <section class="cta_section_small bg_blue px-0">
 	<div class="container">
     	<div class="row align-items-center animation" data-animation="fadeInUp" data-animation-delay="0.2s">
         	<div class="col-md-8 text_white">
-                <h2 class="">Untuk Informasi Lebih Lanjut</h2>
+                <h3>Konsultasikan saja dulu kebutuhan bisnis Anda GRATTISS</h3>
 
             </div>
             <div class="col-md-4 text-md-right">
-            	<a href="#" class="btn btn-outline-white">Hubungi Kami</a>
+            	<a href="#" class="btn btn-outline-white">Chat WhatsApp</a>
             </div>
         </div>
     </div>
 </section>
-<!-- END SECTION CALL TO ACTION -->
-
-<!-- START SECTION BLOG -->
-<?php $this->load->view('fronts/home/v_blog')?>
-<!-- END SECTION BLOG -->
-
-<!-- START SECTION CLIENT LOGO -->
-<?php $this->load->view('fronts/home/v_logo')?>
-<!-- START SECTION CLIENT LOGO -->
-
-<!-- START SECTION SUBCRIBE -->
-<?php $this->load->view('fronts/home/v_subcribe')?>
-<!-- END SECTION SUBCRIBE -->
-
-<!-- START FOOTER SECTION -->
 <?php $this->load->view('fronts/footer')?>
 <!-- END FOOTER SECTION -->
 

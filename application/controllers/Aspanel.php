@@ -76,7 +76,7 @@ class Aspanel extends CI_Controller {
 	public function login()
 	{
             $data['title'] = 'Sign In';
-
+						$data['identitas']= $this->Crud_m->get_by_id_identitas($id='1');
             $this->form_validation->set_rules('username', 'Username', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required');
             if($this->form_validation->run() === FALSE){

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="Arkansys" name="author">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WMP PANEL | Log In</title>
+  <title>cBPanel | Log In</title>
   	<?php $this->load->view('backend/metapanel')?>
 </head>
 <body class="hold-transition login-page">
@@ -16,9 +16,9 @@
 
     <div class="card-body login-card-body">
       <div class="login-logo">
-          <a href="<?php base_url ()?>login"><img src="<?php echo base_url()?>assets/frontend/wmp_p.png" class="brand-image" width="50"></a>
+          <a href="<?php base_url ()?>login"><img src="<?php echo base_url()?>assets/frontend/campur/<?php echo $identitas->logo?>" class="brand-image" width="50"></a>
       </div>
-      <p class="login-box-msg">WMP PANEL</p>
+      <p class="login-box-msg">cBPanel</p>
     <center><?php echo $this->session->flashdata('user_registered'); ?>
     <?php echo $this->session->flashdata('login_failed'); ?>
     <?php echo $this->session->flashdata('user_loggedout'); ?>

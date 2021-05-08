@@ -5,7 +5,7 @@
             	<div class="heading_s1 heading_light text-center text-md-left">
                 	<h2>Jadi Apa Sebenarnya Crudbiz itu?</h2>
                 </div>
-                <p>Crudbiz itu perusahaan yang memiliki banyak keunggulan karena memecahkan permasalah perusahaan untuk bisa mengikuti perkembangan Revolusi 4.0. </p>
+                <p>Crudbiz itu Digital Development yang memiliki banyak keunggulan karena memecahkan permasalah perusahaan untuk bisa mengikuti perkembangan Revolusi 4.0. </p>
                 <p>Perusahaan yang telah mempercayakan kepada Crudbiz dengan mudah memantau perkembangan perusahaan jauh lebih efisien dan profitable</p>
 
                 <a class="nav-link page-scroll btn btn-outline-white" href="#testi">Masih belum percaya?</a>
@@ -36,7 +36,7 @@
                     <div class="col-6 couter_border">
                         <div class="box_counter text-center">
                             <img src="<?php echo base_url()?>assets/frontend/campur/icon5.png">
-                            <h3 class="counter_text"><span class="counter">2020</span></h3>
+                            <h3 class="counter_text"><span class="counter">2019</span></h3>
                             <p>Berdiri Sejak</p>
                         </div>
                     </div>
