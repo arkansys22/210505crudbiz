@@ -29,6 +29,7 @@ class Main extends CI_Controller {
       $data['status_produk']   = '';
 			$data['identitas']= $this->Crud_m->get_by_id_identitas($id='1');
 			$data['posts']= $this->Crud_m->view_one_limit('blogs','blogs_status','blogs_id','desc',$dari,$config['per_page']);
+      $data['posts_paketharga']= $this->Crud_m->view_one_limit('paketharga','paketharga_status','paketharga_id','desc',$dari,$config['per_page']);
       $data['posts_templates_category']= $this->Crud_m->view_one_limit('templates_category','templates_cat_status','templates_cat_id','desc',$dari,$config['per_page']);
       $data['posts_slider'] = $this->Crud_m->view_one_limit('slider','slider_status','slider_id','DESC',$dari,$config['per_page_slider']);
       $data['posts_bisnis'] = $this->Crud_m->view_one_limit('bisnis','bisnis_status','bisnis_id','ASC',$dari,$config['per_page_bisnis']);
