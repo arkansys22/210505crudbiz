@@ -1246,6 +1246,8 @@ class Aspanel extends CI_Controller {
 					$config['create_thumb']= FALSE;
 					$config['maintain_ratio']= FALSE;
 					$config['quality']= '80%';
+					$config['width']= 540;
+					$config['height']= 676;
 					$config['new_image']= './assets/frontend/paketharga/'.$hasil22['file_name'];
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
@@ -1348,6 +1350,8 @@ class Aspanel extends CI_Controller {
 			$config['create_thumb']= FALSE;
 			$config['maintain_ratio']= FALSE;
 			$config['quality']= '80%';
+			$config['width']= 540;
+			$config['height']= 676;
 			$config['new_image']= './assets/frontend/paketharga/'.$hasil22['file_name'];
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();
@@ -1554,6 +1558,8 @@ class Aspanel extends CI_Controller {
 						$config['create_thumb']= FALSE;
 						$config['maintain_ratio']= FALSE;
 						$config['quality']= '80%';
+						$config['width']= 100;
+						$config['height']= 100;
 						$config['new_image']= './assets/frontend/testimoni/'.$hasil22['file_name'];
 						$this->load->library('image_lib', $config);
 						$this->image_lib->resize();
@@ -1587,6 +1593,7 @@ class Aspanel extends CI_Controller {
 														'testimoni_judul'=>$this->db->escape_str($this->input->post('testimoni_judul')),
 														'testimoni_judul_seo'=>$this->mylibrary->seo_title($this->input->post('testimoni_judul')),
 														'testimoni_desk'=>$this->input->post('testimoni_desk'),
+														'testimoni_jabatan'=>$this->input->post('testimoni_jabatan'),
 														'testimoni_post_hari'=>hari_ini(date('w')),
 														'testimoni_post_tanggal'=>date('Y-m-d'),
 														'testimoni_post_jam'=>date('H:i:s'),
@@ -1600,6 +1607,7 @@ class Aspanel extends CI_Controller {
 														'testimoni_judul'=>$this->db->escape_str($this->input->post('testimoni_judul')),
 														'testimoni_judul_seo'=>$this->mylibrary->seo_title($this->input->post('testimoni_judul')),
 														'testimoni_desk'=>$this->input->post('testimoni_desk'),
+														'testimoni_jabatan'=>$this->input->post('testimoni_jabatan'),
 														'testimoni_post_hari'=>hari_ini(date('w')),
 														'testimoni_post_tanggal'=>date('Y-m-d'),
 														'testimoni_post_jam'=>date('H:i:s'),
@@ -1656,6 +1664,8 @@ class Aspanel extends CI_Controller {
 				$config['create_thumb']= FALSE;
 				$config['maintain_ratio']= FALSE;
 				$config['quality']= '80%';
+				$config['width']= 100;
+				$config['height']= 100;
 				$config['new_image']= './assets/frontend/testimoni/'.$hasil22['file_name'];
 				$this->load->library('image_lib', $config);
 				$this->image_lib->resize();
@@ -1689,6 +1699,7 @@ class Aspanel extends CI_Controller {
 												'testimoni_judul'=>$this->db->escape_str($this->input->post('testimoni_judul')),
 												'testimoni_judul_seo'=>$this->mylibrary->seo_title($this->input->post('testimoni_judul')),
 												'testimoni_desk'=>$this->input->post('testimoni_desk'),
+												'testimoni_jabatan'=>$this->input->post('testimoni_jabatan'),
 												'testimoni_update_hari'=>hari_ini(date('w')),
 												'testimoni_update_tanggal'=>date('Y-m-d'),
 												'testimoni_update_jam'=>date('H:i:s'),
@@ -1702,6 +1713,7 @@ class Aspanel extends CI_Controller {
 												'testimoni_judul'=>$this->db->escape_str($this->input->post('testimoni_judul')),
 												'testimoni_judul_seo'=>$this->mylibrary->seo_title($this->input->post('testimoni_judul')),
 												'testimoni_desk'=>$this->input->post('testimoni_desk'),
+												'testimoni_jabatan'=>$this->input->post('testimoni_jabatan'),
 												'testimoni_update_hari'=>hari_ini(date('w')),
 												'testimoni_update_tanggal'=>date('Y-m-d'),
 												'testimoni_update_jam'=>date('H:i:s'),

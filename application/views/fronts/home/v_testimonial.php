@@ -11,54 +11,30 @@
 				<div class="row mb-md-5 mb-3">
             <div class="col-md-12">
                 <div class="testimonial_slider testimonial_style1 carousel_slide3 owl-carousel owl-theme" data-margin="30" data-loop="true" data-center="true" data-autoplay="true">
-            				<div class="item">
+									<?php  foreach ($posts_testimoni as $post_new){
+										?>
+
+										<div class="item">
 				                <div class="testimonial_box">
 				                    <div class="testimonial_img">
-				                        <img class="class="rounded-circle m-auto" src="<?php echo base_url()?>assets/frontend/campur/testimoni.png"/>
+
+																<?php
+	                                  if(empty($post_new->testimoni_gambar)) {
+	                                  echo "<img src='".base_url()."assets/frontend/campur/testimoni.png'>";
+	                                  }else {
+	                                  echo " <img src='".base_url()."assets/frontend/testimoni/".$post_new->testimoni_gambar."'> ";}
+	                              ?>
+
 				                    </div>
 				                    <div class="testi_meta">
-				                        <h6>Lissa Castro</h6>
-				                        <span>Co-Founder</span>
-				                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, quaeillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				                        <h6><?php echo $post_new->testimoni_judul?></h6>
+				                        <span><?php echo $post_new->testimoni_jabatan?></span>
+				                        <p><?php echo $post_new->testimoni_desk?></p>
 				                    </div>
 				                </div>
 				            </div>
-                    <div class="item">
-                        <div class="testimonial_box">
-                            <div class="testimonial_img">
-                                <img class="class="rounded-circle m-auto" src="<?php echo base_url()?>assets/frontend/campur/testimoni.png"/>
-                            </div>
-                            <div class="testi_meta">
-                                <h6>Alden Smith</h6>
-                                <span>Creative Designer</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, quaeillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial_box">
-                            <div class="testimonial_img">
-                              <img class="class="rounded-circle m-auto" src="<?php echo base_url()?>assets/frontend/campur/testimoni.png"/>
-                            </div>
-                            <div class="testi_meta">
-                                <h6>Daisy Lana</h6>
-                                <span>Creative Director</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, quaeillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial_box">
-                            <div class="testimonial_img">
-															<img class="class="rounded-circle m-auto" src="<?php echo base_url()?>assets/frontend/campur/testimoni.png"/>
-                            </div>
-                            <div class="testi_meta">
-                                <h6>Alfred Amos</h6>
-                                <span>Creative Director</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, quaeillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            </div>
-                        </div>
-                    </div>
+
+									<?php } ?>
                 </div>
             </div>
         </div>

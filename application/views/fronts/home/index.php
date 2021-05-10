@@ -41,11 +41,11 @@
 	<div class="container">
     	<div class="row align-items-center animation" data-animation="fadeInUp" data-animation-delay="0.2s">
         	<div class="col-md-8 text_white">
-                <h3>Konsultasikan saja dulu kebutuhan bisnis Anda GRATTISS</h3>
+                <h3>Layanan Gratis Konsultasi Kebutuhan Website Bisnis Anda</h3>
 
             </div>
             <div class="col-md-4 text-md-right">
-            	<a href="#" class="btn btn-outline-white">Chat WhatsApp</a>
+            	<a href="https://api.whatsapp.com/send?phone=<?php echo $identitas->whatsapp?>&text= Halo Crudbiz, mau tanya - tanya tentang bikin website untuk bisnis saya." class="btn btn-outline-white">Chat WhatsApp</a>
             </div>
         </div>
     </div>

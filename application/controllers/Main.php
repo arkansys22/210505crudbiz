@@ -33,6 +33,7 @@ class Main extends CI_Controller {
       $data['posts_templates_category']= $this->Crud_m->view_one_limit('templates_category','templates_cat_status','templates_cat_id','desc',$dari,$config['per_page']);
       $data['posts_slider'] = $this->Crud_m->view_one_limit('slider','slider_status','slider_id','DESC',$dari,$config['per_page_slider']);
       $data['posts_bisnis'] = $this->Crud_m->view_one_limit('bisnis','bisnis_status','bisnis_id','ASC',$dari,$config['per_page_bisnis']);
+      $data['posts_testimoni'] = $this->Crud_m->view_one_limit('testimoni','testimoni_status','testimoni_id','ASC',$dari,$config['per_page_bisnis']);
       $data['posts_templates'] = $this->Crud_m->view_join_one('templates','templates_category','templates_cat_id',array('templates_status'=>'publish'),'templates_id','DESC',$dari,$config['per_page']);
     }else{
 			redirect('main');
