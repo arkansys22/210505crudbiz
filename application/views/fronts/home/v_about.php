@@ -14,7 +14,7 @@
                 <p style="text-align:justify;" >Crudbiz memberikan jasa pembuatan website dan aplikasi Android untuk usaha pemasaran bisnis Anda, dengan tampilan yang bisa disesuaikan dengan karakter / ciri khas bisnis Anda</p>
                 <p style="text-align:justify;"> Website dan aplikasi Android yang dirancang memiliki tampilan yang elegan, professional, cepat diakses dan bisa menyesuaikan sesuai perangkat yang digunakan oleh konsumen Anda</p>
                 <p style="text-align:justify;"> Oleh karena itu Crudbiz merupakan partner yang tepat untuk Anda pelaku UKM atau UMKM, perusahaan skala menengah atau besar, pemerintahan maupun personal branding</p>
-                <a class="nav-link page-scroll btn btn-black" href="#klien">Lihat Daftar Klien</a>
+                <a class="nav-link page-scroll btn btn-primary" href="#klien">Lihat Daftar Klien</a>
 
             </div>
         </div>

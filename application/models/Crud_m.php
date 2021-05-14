@@ -252,6 +252,17 @@ class Crud_m extends CI_model{
           $this->db->set('bisnis_dibaca', ($count->bisnis_dibaca + 1));
           $this->db->update('bisnis');
       }
+      function update_counter_paketharga($id)
+       {
+            //return current article views
+            $this->db->where('paketharga_judul_seo', urldecode($id));
+            $this->db->select('paketharga_dibaca');
+            $count = $this->db->get('paketharga')->row();
+            // then increase by one
+            $this->db->where('paketharga_judul_seo', urldecode($id));
+            $this->db->set('paketharga_dibaca', ($count->paketharga_dibaca + 1));
+            $this->db->update('paketharga');
+        }
 
       function update_counter_berita($id)
        {

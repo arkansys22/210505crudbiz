@@ -45,7 +45,7 @@
                 <tr>
                   <td><?=$tgl_posting?></td>
                   <td>
-                    <?php if($row['slider_meta_desk']== 'active'){?>
+                    <?php if($row['slider_meta_aktiv']== 'active'){?>
                     <?php echo "[Active] ";?><?=$row['slider_judul']?>
                     <?php }else{ ?>
                       <?php echo"[Turunan] ";?><?=$row['slider_judul']?>

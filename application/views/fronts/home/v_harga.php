@@ -15,7 +15,7 @@
 									?>
                   <li class="portfolio-item">
                     <div class="portfolio_item">
-                          <a href="#" class="image_link">
+                          <a href="<?php echo base_url("harga/$post_new->paketharga_judul_seo")?>" class="image_link">
 														<?php
 																											if(empty($post_new->paketharga_gambar)) {
 																												echo "<img src='".base_url()."assets/frontend/campur/harga_22.jpg'>";

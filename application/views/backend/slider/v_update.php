@@ -52,14 +52,37 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                         <label>Status</label>
-                        <select class="form-control" name="slider_meta_desk">
-                          <option value="<?php echo $rows['slider_meta_desk'] ?>" selected="selected"><?php echo $rows['slider_meta_desk'] ?></option>
-                          <?php if($rows['slider_meta_desk']== 'active'){
+                        <select class="form-control" name="slider_meta_aktiv">
+                          <option value="<?php echo $rows['slider_meta_aktiv'] ?>" selected="selected"><?php echo $rows['slider_meta_aktiv'] ?></option>
+                          <?php if($rows['slider_meta_aktiv']== 'active'){
                             echo"<option value='turunan'>turunan</option>";
                           }else{
                             echo"<option value='active'>active</option>";
                           }?>
                         </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                          <label>Description</label>
+                          <textarea class="textarea"  name ="slider_desk" style="width: 100%; height: 100px;"><?php echo $rows['slider_desk'] ?></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Meta Description</label>
+                        <input type="text" class="form-control" name="slider_meta_desk" value="<?php echo $rows['slider_meta_desk'] ?>">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>keyword</label>
+                        <input type="text" class="form-control tags" id="slider_keyword" name="slider_keyword" value="<?php echo $rows['slider_keyword'] ?>">
+                      <?php   $_arrNilai = explode(',', $rows['slider_keyword']);
+                        foreach ($tag as $tag){
+                            $_ck = (array_search($tag['keyword_nama_seo'], $_arrNilai) === false)? '' : 'checked';
+                         } ?>
                       </div>
                     </div>
                   <div class="col-sm-12">
@@ -78,7 +101,7 @@
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" name="gambar">
                           <label class="custom-file-label" for="exampleInputFile">File gambar sebelumnya <?php echo $rows['slider_gambar'] ?></label>
-                        
+
                         </div>
                       </div>
                     </div>

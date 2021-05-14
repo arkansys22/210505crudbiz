@@ -16,7 +16,7 @@
 									?>
 										<li>
 
-												<a href="<?php echo base_url("bisnis/$post_new->bisnis_judul_seo")?>">
+												<a href="<?php echo base_url("klien/$post_new->bisnis_judul_seo")?>">
                             	<div class="gallery_img">
 																<?php
 																					 if(empty($post_new->bisnis_gambar)) {

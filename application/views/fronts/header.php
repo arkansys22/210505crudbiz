@@ -23,41 +23,22 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
       	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="dropdown dropdown-mega-menu">
-                    <a class="nav-link " href="<?php echo base_url()?>">Beranda</a>
-                </li>
-                <li class="dropdown dropdown-mega-menu">
-                    <a class="nav-link " href="<?php echo base_url()?>">Template</a>
-                </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Daftar Harga</a>
+                    <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Bikin Website</a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Landing Page</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Basic</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Business</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Compro</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Properti</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Dealers</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Hukum</a></li>
-                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Website Custom</a></li>
-
+                              <?php  foreach ($posts_paketharga as $post_new){ ?>
+                                <li><a class="dropdown-item nav-link nav_item" href="<?php echo base_url("harga/$post_new->paketharga_judul_seo") ?>"><?php echo $post_new->paketharga_judul?></a></li>
+                            <?php } ?>
                             </ul>
                         </div>
                 </li>
                 <li class="dropdown dropdown-mega-menu">
-                    <a class="nav-link " href="<?php echo base_url()?>">Klien Kami</a>
+                    <a class="nav-link " href="<?php echo base_url()?>">Promo</a>
                 </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle nav-link " href="#" data-toggle="dropdown">Media</a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>">Belajar</a></li>
-                            <li><a style="text-transform: uppercase;" class="dropdown-item nav-link nav_item" href="<?php echo base_url()?>berita">Berita</a></li>
-
-                        </ul>
-                    </div>
-                </li>
+                <!--<li class="dropdown dropdown-mega-menu">
+                    <a class="nav-link " href="<?php echo base_url()?>">Crudbiz VCLASS</a>
+                </li>-->
                 <li class="dropdown dropdown-mega-menu">
                     <a class="nav-link " href="<?php echo base_url()?>">Hubungi Kami</a>
                 </li>

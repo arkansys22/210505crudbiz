@@ -437,7 +437,6 @@ class Aspanel extends CI_Controller {
 					$config['create_thumb']= FALSE;
 					$config['maintain_ratio']= FALSE;
 					$config['quality']= '100%';
-					$config['height']= 48;
 					$config['new_image']= './assets/frontend/campur/'.$hasillogo['file_name'];
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
@@ -951,24 +950,30 @@ class Aspanel extends CI_Controller {
 										'slider_post_oleh'=>$this->session->username,
 										'slider_judul'=>$this->db->escape_str($this->input->post('slider_judul')),
 										'slider_judul_seo'=>$this->mylibrary->seo_title($this->input->post('slider_judul')),
+										'slider_desk'=>$this->input->post('slider_desk'),
+										'slider_meta_desk'=>$this->input->post('slider_meta_desk'),
+										'slider_keyword'=>$this->input->post('slider_keyword'),
 										'slider_post_hari'=>hari_ini(date('w')),
 										'slider_post_tanggal'=>date('Y-m-d'),
 										'slider_post_jam'=>date('H:i:s'),
 										'slider_dibaca'=>'0',
 										'slider_status'=>'publish',
-										'slider_meta_desk'=>'non');
+										'slider_meta_aktiv'=>'non');
 											}else{
 												$data = array(
 													'slider_post_oleh'=>$this->session->username,
 													'slider_judul'=>$this->db->escape_str($this->input->post('slider_judul')),
 													'slider_judul_seo'=>$this->mylibrary->seo_title($this->input->post('slider_judul')),
+													'slider_desk'=>$this->input->post('slider_desk'),
+													'slider_meta_desk'=>$this->input->post('slider_meta_desk'),
+													'slider_keyword'=>$this->input->post('slider_keyword'),
 													'slider_post_hari'=>hari_ini(date('w')),
 													'slider_post_tanggal'=>date('Y-m-d'),
 													'slider_post_jam'=>date('H:i:s'),
 													'slider_dibaca'=>'0',
 													'slider_status'=>'publish',
 													'slider_gambar'=>$hasil22['file_name'],
-													'slider_meta_desk'=>'non');
+													'slider_meta_aktiv'=>'non');
 												}
 								$this->As_m->insert('slider',$data);
 								redirect('aspanel/slider');
@@ -1049,10 +1054,12 @@ class Aspanel extends CI_Controller {
 											'slider_judul'=>$this->db->escape_str($this->input->post('slider_judul')),
 											'slider_judul_seo'=>$this->mylibrary->seo_title($this->input->post('slider_judul')),
 											'slider_desk'=>$this->input->post('slider_desk'),
+											'slider_meta_desk'=>$this->input->post('slider_meta_desk'),
+											'slider_keyword'=>$this->input->post('slider_keyword'),
 											'slider_post_hari'=>hari_ini(date('w')),
 											'slider_post_tanggal'=>date('Y-m-d'),
 											'slider_post_jam'=>date('H:i:s'),
-											'slider_meta_desk'=>$this->input->post('slider_meta_desk'),
+											'slider_meta_aktiv'=>$this->input->post('slider_meta_aktiv'),
 											'slider_keyword'=>$tag);
 											$where = array('slider_id' => $this->input->post('slider_id'));
 											$this->db->update('slider', $data, $where);
@@ -1062,11 +1069,13 @@ class Aspanel extends CI_Controller {
 											'slider_judul'=>$this->db->escape_str($this->input->post('slider_judul')),
 											'slider_judul_seo'=>$this->mylibrary->seo_title($this->input->post('slider_judul')),
 											'slider_desk'=>$this->input->post('slider_desk'),
+											'slider_meta_desk'=>$this->input->post('slider_meta_desk'),
+											'slider_keyword'=>$this->input->post('slider_keyword'),
 											'slider_post_hari'=>hari_ini(date('w')),
 											'slider_post_tanggal'=>date('Y-m-d'),
 											'slider_post_jam'=>date('H:i:s'),
 											'slider_gambar'=>$hasil22['file_name'],
-											'slider_meta_desk'=>$this->input->post('slider_meta_desk'),
+											'slider_meta_aktiv'=>$this->input->post('slider_meta_aktiv'),
 											'slider_keyword'=>$tag);
 											$where = array('slider_id' => $this->input->post('slider_id'));
 											$_image = $this->db->get_where('slider',$where)->row();
