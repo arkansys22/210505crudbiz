@@ -53,12 +53,11 @@
                     <li><span class="text-uppercase">Lama Pengerjaan</span>3 Hari</li>
                     <li><span class="text-uppercase">Harga</span>Rp. 500.000</li>
                     <li><span class="text-uppercase">Fitur Terbaik</span>Gratis domain & hosting, Gratis SSL, Email Profesional, Mobile Optimized, SEO Friendly, Support 24/7, Pengelolaan Website Mudah Untuk Pemula, Akses Cepat Dengan Wordpress Optimized.</li>
-                    <li><span class="text-uppercase">Pilih Tampilan</span>Sesuaikan Dengan Kebutuhan</li>
+                    <li><span class="text-uppercase">Cari Tampilan</span><a href="#" class="btn btn-success btn-sm">Pilih Tampilan</a></li>
                     <li><span class="text-uppercase">Bagikan </span>
                         <ul class="list_none social_icons border_social rounded_social">
-                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                            <li><a href="#"><i class="ion-social-whatsapp"></i></a></li>
+													<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("$posts->paketharga_judul_seo ") ?> onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo base_url()?><?php echo $posts->paketharga_judul_seo ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>
+													<li><a href="whatsapp://send?text=<?php echo $posts->paketharga_judul ?> | <?php echo base_url("$posts->paketharga_judul_seo ") ?>" title="Whatsapp" target="_blank"><i class="ion-social-whatsapp"></i></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -71,10 +70,9 @@
     	<div class="row">
             <div class="col-sm-12" >
                 <div class="heading_s4 text-center">
-                	<span class="sub_title">Tampilan Webiste</span>
-                    <h2>Bebas Pilih Dan Custom</h2>
+                    <h2>Bukan Website Ini Yang Anda Mau ?</h2>
                 </div>
-                <p><center>Memilih Tampilan Website Yang Tepat Dapat Mempermudah Konsumen Dalam Menentukan Produk Yang Anda Tawarkan</center></p>
+                <p><center>Kami memiliki beragam website menarik lain sesuai kebutuhan bisnis Anda.</center></p>
             </div>
         </div>
         <div class="row">
@@ -83,25 +81,27 @@
             </div>
         </div>
 				<div class="row">
-            <div class="col-md-12">
-                <ul class="list_none carousel_slide4 owl-carousel owl-theme" data-margin="15" data-dots="false" data-autoplay="false" data-nav="true" data-loop="true">
-									<?php  foreach ($posts_templates as $post_new){
+	          <div class="col-md-12">
+	              <ul class="portfolio_gallery portfolio_style4 carousel_slide4 owl-carousel owl-theme" data-margin="15" data-dots="false" data-autoplay="true" data-nav="true" data-loop="true" data-autoplay-timeout="2000">
+									<?php  foreach ($posts_paketharga as $post_new){
 										?>
-										<a href="">
-										<li>
-											<?php
-																								if(empty($post_new->templates_gambar)) {
-																									echo "<img src='".base_url()."assets/frontend/campur/template_blank.jpg'>";
-																								}else {
-																									echo " <img src='".base_url()."assets/frontend/produk/".$post_new->templates_gambar."'> ";}
-																								?>
+	                  <li class="portfolio-item">
+	                    <div class="portfolio_item">
+	                          <a href="<?php echo base_url("harga/$post_new->paketharga_judul_seo")?>" class="image_link">
+															<?php
+																												if(empty($post_new->paketharga_gambar)) {
+																													echo "<img src='".base_url()."assets/frontend/campur/harga_22.jpg'>";
+																												}else {
+																													echo " <img src='".base_url()."assets/frontend/paketharga/".$post_new->paketharga_gambar."'> ";}
+																												?>
 
-                    </li>
-										</a>
+	                          </a>
+	                    </div>
+	                  </li>
 									<?php } ?>
-                </ul>
-            </div>
-        </div>
+	              </ul>
+	          </div>
+	      </div>
     </div>
 </section>
 

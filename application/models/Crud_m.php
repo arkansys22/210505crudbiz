@@ -242,7 +242,7 @@ class Crud_m extends CI_model{
         $this->db->update('blogs');
     }
     function update_counter_bisnis($id)
-     {
+      {
           //return current article views
           $this->db->where('bisnis_judul_seo', urldecode($id));
           $this->db->select('bisnis_dibaca');
@@ -252,8 +252,19 @@ class Crud_m extends CI_model{
           $this->db->set('bisnis_dibaca', ($count->bisnis_dibaca + 1));
           $this->db->update('bisnis');
       }
+    function update_counter_templates($id)
+      {
+            //return current article views
+            $this->db->where('templates_judul_seo', urldecode($id));
+            $this->db->select('templates_dibaca');
+            $count = $this->db->get('templates')->row();
+            // then increase by one
+            $this->db->where('templates_judul_seo', urldecode($id));
+            $this->db->set('templates_dibaca', ($count->templates_dibaca + 1));
+            $this->db->update('templates');
+      }
       function update_counter_paketharga($id)
-       {
+      {
             //return current article views
             $this->db->where('paketharga_judul_seo', urldecode($id));
             $this->db->select('paketharga_dibaca');

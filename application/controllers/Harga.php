@@ -13,7 +13,7 @@ class Harga extends CI_Controller {
 	{
 
 			$config['per_page'] = 4;
-      $config['per_page_template'] = 10;
+      
 			$row = $this->Crud_m->get_by_id_post($id,'paketharga_id','paketharga','paketharga_judul_seo');
 			if ($this->uri->segment('4')==''){
 				$dari = 0;
@@ -22,13 +22,11 @@ class Harga extends CI_Controller {
 			}
 			if ($row)
 				{
-          $data['status']   = 'active';
-          $data['status_produk']   = '';
 					$data['posts']            = $this->Crud_m->get_by_id_post($id,'paketharga_id','paketharga','paketharga_judul_seo');
 					$this->add_count($id);
 					$data['identitas']= $this->Crud_m->get_by_id_identitas($id='1');
           $data['posts_paketharga']= $this->Crud_m->view_one_limit('paketharga','paketharga_status','paketharga_id','ASC',$dari,$config['per_page']=30);
-          $data['posts_templates'] = $this->Crud_m->view_join_one('templates','templates_category','templates_cat_id',array('templates_status'=>'publish'),'templates_id','DESC',$dari,$config['per_page_template']);
+
           $this->load->view('fronts/harga/v_detail', $data);
 				}
 				else
