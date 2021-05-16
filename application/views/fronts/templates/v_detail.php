@@ -67,7 +67,7 @@
 												<li><span class="text-uppercase">Sudah Sesuai</span><a href="https://api.whatsapp.com/send?phone=<?php echo $identitas->whatsapp?>&text=Hai,%20Crudbiz.%20Saya%20mau%20bikin%20website%20dengan%20memilih%20<?php echo $posts->templates_judul ?>.%20Bagaimana%20cara%20memesannya%20?" class="btn btn-success btn-sm">Pilih Website Ini</a></li>
 												<li><span class="text-uppercase">Bagikan </span>
                         	<ul class="list_none social_icons border_social rounded_social">
-                            	<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("templates/$posts->templates_judul_seo ") ?> onclick="window.open('https://www.facebook.com/sharer.php?u=<?php echo base_url("templates/$posts->templates_judul_seo ") ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>
+                            	<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("templates/$posts->templates_judul_seo ") ?>" onclick="window.open('https://www.facebook.com/sharer.php?u=<?php echo base_url("templates/$posts->templates_judul_seo ") ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook"><i class="ion-social-facebook"></i></a></li>
                             	<li><a href="whatsapp://send?text=<?php echo $posts->templates_judul ?> | <?php echo base_url("$posts->templates_judul_seo ") ?>" title="Whatsapp" target="_blank"><i class="ion-social-whatsapp"></i></a></li>
                         	</ul>
                         </li>
