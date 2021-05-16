@@ -18,9 +18,9 @@
 <link href='<?php echo base_url()?>templates/<?php echo $posts->templates_judul_seo ?>' rel='canonical'/>
 <meta property="og:site_name" content="<?php echo $identitas->nama_website?>">
 <meta property="og:description" content="<?php echo $posts->templates_meta_desk ?>">
-<meta property="og:url" content="<?php echo base_url()?>klien/<?php echo $posts->templates_judul_seo ?>">
-<meta property="og:image" content="<?php echo base_url()?>assets/frontend/linitemplates/<?php echo $posts->templates_gambar ?>">
-<meta property="og:image:url" content="<?php echo base_url()?>assets/frontend/linitemplates/<?php echo $posts->templates_gambar ?>">
+<meta property="og:url" content="<?php echo base_url()?>templates/<?php echo $posts->templates_judul_seo ?>">
+<meta property="og:image" content="<?php echo base_url()?>assets/frontend/produk/<?php echo $posts->templates_gambar ?>">
+<meta property="og:image:url" content="<?php echo base_url()?>assets/frontend/produk/<?php echo $posts->templates_gambar ?>">
 <meta property="og:type" content="article">
 <link rel="shortcut icon" href="<?php echo base_url()?>assets/frontend/campur/<?php echo $identitas->favicon?>" type="image/x-icon">
 <?php $this->load->view('fronts/analytics')?>
