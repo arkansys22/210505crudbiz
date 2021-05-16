@@ -33,7 +33,7 @@
                     ?>
                     <li class="portfolio-item <?php echo $post_new->templates_cat_judul_seo?>">
                         <div class="portfolio_item">
-                            <a href="#" class="image_link">
+                            <a href="<?php echo base_url("templates/$post_new->templates_judul_seo")?>" class="image_link">
                               <?php
                                                         if(empty($post_new->templates_gambar)) {
                                                           echo "<img style='height:210px' src='".base_url()."assets/frontend/campur/template_blank.jpg'>";
