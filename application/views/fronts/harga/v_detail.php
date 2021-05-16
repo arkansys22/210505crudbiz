@@ -50,10 +50,9 @@
             	<h5><?php echo $posts->paketharga_judul ?></h5>
                 <?php echo $posts->paketharga_desk ?>
                 <ul class="list_none portfolio_info_box">
-                    <li><span class="text-uppercase">Lama Pengerjaan</span>3 Hari</li>
-                    <li><span class="text-uppercase">Harga</span>Rp. 500.000</li>
-                    <li><span class="text-uppercase">Fitur Terbaik</span>Gratis domain & hosting, Gratis SSL, Email Profesional, Mobile Optimized, SEO Friendly, Support 24/7, Pengelolaan Website Mudah Untuk Pemula, Akses Cepat Dengan Wordpress Optimized.</li>
-                    <li><span class="text-uppercase">Cari Tampilan</span><a href="#" class="btn btn-success btn-sm">Pilih Tampilan</a></li>
+                    <li><span class="text-uppercase">Harga</span>Rp. <?php echo number_format($posts->paketharga_harga,0,',','.') ?></li>
+                    <li><span class="text-uppercase">Fitur Terbaik</span><?php echo $posts->paketharga_fitur ?></li>
+                    <li><span class="text-uppercase">Cari Tampilan</span><a href="<?php echo base_url()?>" class="btn btn-success btn-sm">Pilih Tampilan</a></li>
                     <li><span class="text-uppercase">Bagikan </span>
                         <ul class="list_none social_icons border_social rounded_social">
 													<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("$posts->paketharga_judul_seo ") ?> onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo base_url()?><?php echo $posts->paketharga_judul_seo ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>

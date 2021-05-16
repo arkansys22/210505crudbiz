@@ -56,14 +56,15 @@
             	<h5><?php echo $posts->templates_judul ?></h5>
                 <?php echo $posts->templates_desk ?>
 								<p>Tekan tombol “Lihat Demo” dan nikmati secara langsung pengalaman menggunakan websitenya.
-                <a href="#" class="btn btn-outline-primary btn-sm">Lihat Demo</a>
+                <a href="<?php echo $posts->templates_url ?>" target="_blank"class="btn btn-outline-primary btn-sm">Lihat Demo</a>
             </div>
             <div class="col-lg-4 col-md-5 animation" data-animation="fadeInUp" data-animation-delay="0.6s">
             	<div class="gray_bg p-3 p-md-4">
                     <ul class="list_none portfolio_info_box">
-                        <li><span class="text-uppercase">Untuk Bisnis</span>Properti</li>
-                        <li><span class="text-uppercase">Fitur Unggulan</span>Google Maps, Testimoni, Galeri, Our Team, Wordpress CMS, Yoast SEO Plugin, Elementor Page Builder</li>
-												<li><span class="text-uppercase">Sudah Sesuai</span><a href="#" class="btn btn-success btn-sm">Pilih Website Ini</a></li>
+												<?php $category = $this->Crud_m->view_join_where_array('templates_category','templates','templates_cat_id',array ('templates.templates_cat_id' => $posts->templates_cat_id))->row_array(); ?>
+                        <li><span class="text-uppercase">Untuk Bisnis</span><?php echo $category['templates_cat_judul']?></li>
+                        <li><span class="text-uppercase">Fitur Unggulan</span><?php echo $posts->templates_fitur ?></li>
+												<li><span class="text-uppercase">Sudah Sesuai</span><a href="https://api.whatsapp.com/send?phone=<?php echo $identitas->whatsapp?>&text=Hai,%20Crudbiz.%20Saya%20mau%20bikin%20website%20dengan%20memilih%20<?php echo $posts->templates_judul ?>.%20Bagaimana%20cara%20memesannya%20?" class="btn btn-success btn-sm">Pilih Website Ini</a></li>
 												<li><span class="text-uppercase">Bagikan </span>
                         	<ul class="list_none social_icons border_social rounded_social">
                             	<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("$posts->templates_judul_seo ") ?> onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo base_url()?><?php echo $posts->templates_judul_seo ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>

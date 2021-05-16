@@ -65,6 +65,22 @@
                     </div>
                   </div>
                 </div></div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Template Feature</label>
+                      <input type="text" class="form-control" name="templates_fitur" placeholder="Fitur yang ada di templates">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Template URL</label>
+                      <input type="text" class="form-control" name="templates_url" placeholder="URL preview templates">
+                    </div>
+                  </div>
+                </div>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">

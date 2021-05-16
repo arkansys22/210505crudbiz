@@ -51,6 +51,22 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
+                        <label>Price Tag</label>
+                        <input type="number" class="form-control" name="paketharga_harga" value="<?php echo $rows['paketharga_harga'] ?>">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Features</label>
+                        <input type="text" class="form-control" name="paketharga_fitur" value="<?php echo $rows['paketharga_fitur'] ?>">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
                         <label>Description</label>
                         <textarea class="textarea"  name ="paketharga_desk" style="width: 100%; height: 100px;"><?php echo $rows['paketharga_desk'] ?></textarea>
                       </div>
@@ -66,7 +82,7 @@
                     <div class="col-sm-12">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>keyword</label>
+                        <label>Keywords</label>
                         <input type="text" class="form-control tags" id="products_keyword" name="paketharga_keyword" value="<?php echo $rows['paketharga_keyword'] ?>">
                       <?php   $_arrNilai = explode(',', $rows['paketharga_keyword']);
                         foreach ($tag as $tag){

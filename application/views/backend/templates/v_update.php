@@ -65,6 +65,23 @@
                     </div>
                   </div>
                 </div></div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Template Feature</label>
+                      <input type="text" class="form-control" name="templates_fitur" value="<?php echo $rows['templates_fitur'] ?>">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Template Url</label>
+                      <input type="text" class="form-control" name="templates_url" value="<?php echo $rows['templates_url'] ?>">
+                    </div>
+                  </div>
+                </div>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">

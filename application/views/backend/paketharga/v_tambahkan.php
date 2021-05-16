@@ -51,6 +51,22 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
+                        <label>Price Tag</label>
+                        <input type="number" class="form-control" name="paketharga_harga" placeholder="Price Your Products">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Features</label>
+                        <input type="text" class="form-control" name="paketharga_fitur" placeholder="Features Your Products">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
                         <label>Description</label>
                         <textarea class="textarea"  name ="paketharga_desk" style="width: 100%; height: 100px;"></textarea>
                       </div>
