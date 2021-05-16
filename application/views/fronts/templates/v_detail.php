@@ -125,6 +125,14 @@
 
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
+<div id="fb-root"></div>
+           <script>(function(d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.10&appId=129429343801925';
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));</script>
 <!-- Latest jQuery -->
 <script src="<?php echo base_url()?>assets/js/jquery-1.12.4.min.js"></script>
 <!-- jquery-ui -->
