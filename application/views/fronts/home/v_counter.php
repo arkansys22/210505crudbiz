@@ -16,28 +16,28 @@
                         <div class="box_counter text-center">
                             <img src="<?php echo base_url()?>assets/frontend/campur/icon1.png">
                             <h3 class="counter_text"><span class="counter">100</span></h3>
-                            <p>Masalah Klien Terselesaikan</p>
+                            <p>Klien Terselesaikan</p>
                         </div>
                     </div>
                     <div class="col-6 couter_border">
                         <div class="box_counter text-center">
-                            <img src="<?php echo base_url()?>assets/frontend/campur/icon3.png">
+                            <img src="<?php echo base_url()?>assets/frontend/campur/icon2.png">
                             <h3 class="counter_text">Rp.<span class="counter">600.000</span></h3>
                             <p>Harga Mulai Dari</p>
                         </div>
                     </div>
                     <div class="col-6 couter_border">
                         <div class="box_counter text-center">
-                            <img src="<?php echo base_url()?>assets/frontend/campur/icon4.png">
+                            <img src="<?php echo base_url()?>assets/frontend/campur/icon3.png">
                             <h3 class="counter_text"><span class="counter">20</span>+</h3>
                             <p>Model Template</p>
                         </div>
                     </div>
                     <div class="col-6 couter_border">
                         <div class="box_counter text-center">
-                            <img src="<?php echo base_url()?>assets/frontend/campur/icon5.png">
-                            <h3 class="counter_text"><span class="counter">2019</span></h3>
-                            <p>Berdiri Sejak</p>
+                            <img src="<?php echo base_url()?>assets/frontend/campur/icon4.png">
+                            <h3 class="counter_text"><span class="counter">24</span>/7</h3>
+                            <p>Konsultasi</p>
                         </div>
                     </div>
                 </div>
