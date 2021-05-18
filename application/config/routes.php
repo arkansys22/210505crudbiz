@@ -4,10 +4,9 @@ $route['default_controller'] = 'Main';
 $route['login'] = "Aspanel/login";
 $route['berita'] = "Berita/index";
 $route['klien/(:any)'] = "Klien/detail/$1";
-$route['(:any)'] = "berita/detail/$1";
 $route['harga/(:any)'] = "Harga/detail/$1";
 $route['templates/(:any)'] = "templates/detail/$1";
-
 $route['404_override'] = 'Notfound';
 $route['translate_uri_dashes'] = FALSE;
 $route['petacrawl\.xml'] = "petacrawl";
+$route['(:any)'] = "berita/detail/$1";
