@@ -55,7 +55,7 @@
                     <li><span class="text-uppercase">Cari Tampilan</span><a href="<?php echo base_url()?>" class="btn btn-success btn-sm">Pilih Tampilan</a></li>
                     <li><span class="text-uppercase">Bagikan </span>
                         <ul class="list_none social_icons border_social rounded_social">
-													<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("harga/$posts->paketharga_judul_seo ") ?> onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo base_url()?>harga/<?php echo $posts->paketharga_judul_seo ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>
+													<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("harga/$posts->paketharga_judul_seo ") ?>" onclick="window.open('https://www.facebook.com/sharer.php?u=<?php echo base_url("harga/$posts->paketharga_judul_seo ") ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook"><i class="ion-social-facebook"></i></a></li>
 													<li><a href="whatsapp://send?text=<?php echo $posts->paketharga_judul ?> | <?php echo base_url("harga/$posts->paketharga_judul_seo ") ?>" title="Whatsapp" target="_blank"><i class="ion-social-whatsapp"></i></a></li>
                         </ul>
                     </li>
@@ -107,9 +107,15 @@
 <!-- START FOOTER SECTION -->
 <?php $this->load->view('fronts/footer')?>
 <!-- END FOOTER SECTION -->
-
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
-
+<div id="fb-root"></div>
+           <script>(function(d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.10&appId=129429343801925';
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));</script>
 <!-- Latest jQuery -->
 <script src="<?php echo base_url()?>assets/js/jquery-1.12.4.min.js"></script>
 <!-- jquery-ui -->
