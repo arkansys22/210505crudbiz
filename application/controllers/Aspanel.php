@@ -1254,7 +1254,7 @@ class Aspanel extends CI_Controller {
 					$config['source_image'] = './assets/frontend/paketharga/'.$hasil22['file_name'];
 					$config['create_thumb']= FALSE;
 					$config['maintain_ratio']= FALSE;
-					$config['quality']= '80%';
+					$config['quality']= '100%';
 					$config['width']= 1080;
 					$config['height']= 1920;
 					$config['new_image']= './assets/frontend/paketharga/'.$hasil22['file_name'];
@@ -1362,7 +1362,7 @@ class Aspanel extends CI_Controller {
 			$config['source_image'] = './assets/frontend/paketharga/'.$hasil22['file_name'];
 			$config['create_thumb']= FALSE;
 			$config['maintain_ratio']= FALSE;
-			$config['quality']= '80%';
+			$config['quality']= '100%';
 			$config['width']= 1080;
 			$config['height']= 1920;
 			$config['new_image']= './assets/frontend/paketharga/'.$hasil22['file_name'];
