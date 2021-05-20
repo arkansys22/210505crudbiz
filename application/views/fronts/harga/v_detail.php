@@ -10,15 +10,15 @@
 <title><?php echo $posts->paketharga_judul ?> - <?php echo $posts->paketharga_keyword ?> - <?php echo $identitas->slogan?></title>
 <meta name="title" content="<?php echo $posts->paketharga_judul ?> - <?php echo $posts->paketharga_keyword ?> | <?php echo $identitas->nama_website?>">
 <meta property="og:title" content="<?php echo $posts->paketharga_judul ?> - <?php echo $posts->paketharga_keyword ?> | <?php echo $identitas->nama_website?>">
-<meta name="site_url" content="<?php echo base_url()?>paketharga/<?php echo $posts->paketharga_judul_seo ?>">
+<meta name="site_url" content="<?php echo base_url()?>harga/<?php echo $posts->paketharga_judul_seo ?>">
 <meta name="description" content="<?php echo $posts->paketharga_meta_desk ?>">
 <meta name="keywords" content="<?php echo $posts->paketharga_keyword ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link rel="alternate" href="<?php echo base_url()?>paketharga/<?php echo $posts->paketharga_judul_seo ?>" hreflang="id" />
-<link href='<?php echo base_url()?>paketharga_/<?php echo $posts->paketharga_judul_seo ?>' rel='canonical'/>
+<link rel="alternate" href="<?php echo base_url()?>harga/<?php echo $posts->paketharga_judul_seo ?>" hreflang="id" />
+<link href='<?php echo base_url()?>harga/<?php echo $posts->paketharga_judul_seo ?>' rel='canonical'/>
 <meta property="og:site_name" content="<?php echo $identitas->nama_website?>">
 <meta property="og:description" content="<?php echo $posts->paketharga_meta_desk ?>">
-<meta property="og:url" content="<?php echo base_url()?>klien/<?php echo $posts->paketharga_judul_seo ?>">
+<meta property="og:url" content="<?php echo base_url()?>harga/<?php echo $posts->paketharga_judul_seo ?>">
 <meta property="og:image" content="<?php echo base_url()?>assets/frontend/paketharga/<?php echo $posts->paketharga_gambar ?>">
 <meta property="og:image:url" content="<?php echo base_url()?>assets/frontend/paketharga/<?php echo $posts->paketharga_gambar ?>">
 <meta property="og:type" content="article">
@@ -55,8 +55,8 @@
                     <li><span class="text-uppercase">Cari Tampilan</span><a href="<?php echo base_url()?>" class="btn btn-success btn-sm">Pilih Tampilan</a></li>
                     <li><span class="text-uppercase">Bagikan </span>
                         <ul class="list_none social_icons border_social rounded_social">
-													<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("$posts->paketharga_judul_seo ") ?> onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo base_url()?><?php echo $posts->paketharga_judul_seo ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>
-													<li><a href="whatsapp://send?text=<?php echo $posts->paketharga_judul ?> | <?php echo base_url("$posts->paketharga_judul_seo ") ?>" title="Whatsapp" target="_blank"><i class="ion-social-whatsapp"></i></a></li>
+													<li><a href="http://www.facebook.com/sharer.php?u=<?php echo base_url("harga/$posts->paketharga_judul_seo ") ?> onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo base_url()?>harga/<?php echo $posts->paketharga_judul_seo ?>','newwindow','width=400,height=350');  return false;" title="Facebook" target="_blank" title="Facebook""><i class="ion-social-facebook"></i></a></li>
+													<li><a href="whatsapp://send?text=<?php echo $posts->paketharga_judul ?> | <?php echo base_url("harga/$posts->paketharga_judul_seo ") ?>" title="Whatsapp" target="_blank"><i class="ion-social-whatsapp"></i></a></li>
                         </ul>
                     </li>
                 </ul>
