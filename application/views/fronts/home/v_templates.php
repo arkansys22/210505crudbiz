@@ -36,9 +36,9 @@
                             <a href="<?php echo base_url("templates/$post_new->templates_judul_seo")?>" class="image_link">
                               <?php
                                                         if(empty($post_new->templates_gambar)) {
-                                                          echo "<img style='height:210px' src='".base_url()."assets/frontend/campur/template_blank.jpg'>";
+                                                          echo "<img style='height:800px' src='".base_url()."assets/frontend/campur/template_blank.jpg'>";
                                                         }else {
-                                                          echo " <img style='height:210px' src='".base_url()."assets/frontend/produk/".$post_new->templates_gambar."'> ";}
+                                                          echo " <img style='height:800px' src='".base_url()."assets/frontend/produk/".$post_new->templates_gambar."'> ";}
                                                         ?>
                             </a>
                                 <div class="portfolio_content">
