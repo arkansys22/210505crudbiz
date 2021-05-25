@@ -32,7 +32,6 @@
 <?php $this->load->view('fronts/home/v_slider')?>
 <?php $this->load->view('fronts/home/v_about')?>
 <?php $this->load->view('fronts/home/v_daftar_klien')?>
-<?php $this->load->view('fronts/home/v_templates')?>
 <?php $this->load->view('fronts/home/v_counter')?>
 <?php $this->load->view('fronts/home/v_testimonial')?>
 <?php $this->load->view('fronts/home/v_harga')?>
