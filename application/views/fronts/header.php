@@ -58,7 +58,7 @@
                         <div class="form-group col-md-12">
                             <button type="submit" class="btn btn-default btn-aylen col-md-12">Masuk</button>
                             <p><center><a href="">Lupa kata sandi?</a></center></p>
-                            <p><span>atau <a href="">daftar baru</a> hanya 20 detik untuk akun baru Anda.</span></p>
+                            <p><span>atau <a href="<?php echo base_url()?>daftar">daftar baru</a> hanya 20 detik untuk akun baru Anda.</span></p>
                         </div>
                       </form>
                       <?php echo form_close(); ?>
