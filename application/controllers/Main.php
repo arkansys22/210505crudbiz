@@ -25,8 +25,6 @@ class Main extends CI_Controller {
 
     if (is_numeric($dari)) {
 			$config['per_page'] = 30;
-			$data['status']   = 'active';
-      $data['status_produk']   = '';
 			$data['identitas']= $this->Crud_m->get_by_id_identitas($id='1');
 			$data['posts']= $this->Crud_m->view_one_limit('blogs','blogs_status','blogs_id','desc',$dari,$config['per_page']);
       $data['posts_paketharga']= $this->Crud_m->view_one_limit('paketharga','paketharga_status','paketharga_id','ASC',$dari,$config['per_page']);

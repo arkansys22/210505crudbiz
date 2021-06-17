@@ -22,7 +22,7 @@
                     <div class="col-6 couter_border">
                         <div class="box_counter text-center">
                             <img src="<?php echo base_url()?>assets/frontend/campur/icon2.png">
-                            <h3 class="counter_text">Rp.<span class="counter">600.000</span></h3>
+                            <h3 class="counter_text">Rp.<span class="counter">599.000</span></h3>
                             <p>Harga Mulai Dari</p>
                         </div>
                     </div>

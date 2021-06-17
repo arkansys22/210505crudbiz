@@ -39,9 +39,6 @@
                 <!--<li class="dropdown dropdown-mega-menu">
                     <a class="nav-link " href="<?php echo base_url()?>">Crudbiz VCLASS</a>
                 </li>-->
-                <li class="dropdown dropdown-mega-menu">
-                    <a class="nav-link " href="<?php echo base_url()?>">Hubungi Kami</a>
-                </li>
             </ul>
         </div>
         <ul class="navbar-nav attr-nav align-items-center">
@@ -49,26 +46,26 @@
                 	<div class="cart_box dropdown-menu dropdown-menu-right">
                     <div class="field_form form_style4">
                       <br>
-                      <form method="post" name="abc">
+                      <?php echo form_open('login'); ?>
                         <div class="form-group col-md-12">
-                            <input required placeholder="Username" class="form-control" name="name" type="text">
+                            <input required placeholder="Username" class="form-control" name="username" type="text">
                             <label>Username:</label>
                         </div>
                         <div class="form-group col-md-12">
-                            <input required placeholder="Name" class="form-control" name="name" type="text">
+                            <input required placeholder="Password" class="form-control" name="password" type="text">
                             <label>Password:</label>
                         </div>
                         <div class="form-group col-md-12">
-                            <button type="button" class="btn btn-default btn-aylen col-md-12">Masuk</button>
+                            <button type="submit" class="btn btn-default btn-aylen col-md-12">Masuk</button>
                             <p><center><a href="">Lupa kata sandi?</a></center></p>
-                            <p><button type="button" class="btn btn-success btn-aylen col-md-12">Buat Akun Baru</button></p>
-                            <p><span>Buat akun untuk dapatkan manfaatnya</span></p>
+                            <p><span>atau <a href="">daftar baru</a> hanya 20 detik untuk akun baru Anda.</span></p>
                         </div>
                       </form>
+                      <?php echo form_close(); ?>
                     </div>
                     </div>
                 </li>
-                <li><a href="" class="nav-link "><i class="ion-social-whatsapp-outline"></i></a>
+                <li><a href="https://api.whatsapp.com/send?phone=<?php echo $identitas->whatsapp?>&text= Halo Crudbiz, mau konsultasi untuk bisnis saya." class="nav-link "><i class="ion-social-whatsapp-outline"></i></a>
             </ul>
     </nav>
   </div>
