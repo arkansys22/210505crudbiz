@@ -6,9 +6,6 @@ class Aspanel extends CI_Controller {
 	{
 		parent::__construct();
 		date_default_timezone_set('Asia/Jakarta');
-		$this->load->model(array('As_m','Crud_m'));
-		$this->load->helper(array('form', 'url','custom'));
-		$this->load->library(array('session', 'form_validation','mylibrary','email','upload'));
 	}
 	public function index()
 	{
@@ -84,7 +81,7 @@ class Aspanel extends CI_Controller {
             } else {
 
                 $username = $this->input->post('username');
-                $password = sha1($this->input->post('password'));
+								$password = hash("sha512", md5($this->input->post('password')));
 								$cek = $this->As_m->cek_login($username,$password,'user');
 							    $row = $cek->row_array();
 							    $total = $cek->num_rows();
@@ -112,37 +109,62 @@ class Aspanel extends CI_Controller {
 	public function register()
 	{
 						$data['title'] = 'Sign Up';
-            $this->form_validation->set_rules('username','','required|min_length[5]|max_length[12]|is_unique[user.username]', array('required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
-						$this->form_validation->set_rules('nama','','required', array('required'=>'Nama masih kosong'));
-            $this->form_validation->set_rules('email','','required|valid_email|is_unique[user.email]', array('required' => 'Email masih kosong','is_unique' => 'Email telah digunakan, silahkan gunakan email lain.'));
-            $this->form_validation->set_rules('password','','required', array('required'=>'Password masih kosong'));
-            $this->form_validation->set_rules('password2', '','required|matches[password]', array('required' => 'Konfirmasi password masih kosong','matches'=>'Password tidak sama! Cek kembali password Anda'));
+            $this->form_validation->set_rules('username','','trim|required|min_length[5]|max_length[12]|is_unique[user.username]', array('trim' => '','required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
+						$this->form_validation->set_rules('nama','','trim|required', array('trim' => '','required'=>'Nama masih kosong'));
+            $this->form_validation->set_rules('email','','trim|required|valid_email|is_unique[user.email]', array('trim' => '','required' => 'Email masih kosong','is_unique' => 'Email telah digunakan, silahkan gunakan email lain.'));
+            $this->form_validation->set_rules('password','','trim|required', array('trim' => '','required'=>'Password masih kosong'));
+            $this->form_validation->set_rules('password2', '','trim|required|matches[password]', array('trim' => '','required' => 'Konfirmasi password masih kosong','matches'=>'Password tidak sama! Cek kembali password Anda'));
 
             if($this->form_validation->run() === FALSE){
-                $this->load->view('backend/register', $data);
-            }else{
-                $enc_password = sha1($this->input->post('password'));
-								$data_user = array(
-													'username' => $this->input->post('username'),
-													'email' => $this->input->post('email'),
-													'password' => $enc_password,
-													'user_status' => '1',
-													'level' => '4',
-													'user_post_hari'=>hari_ini(date('w')),
-													'user_post_tanggal'=>date('Y-m-d'),
-													'user_post_jam'=>date('H:i:s'),
-													'id_session'=>md5($this->input->post('email')).'-'.date('YmdHis'),
-													'nama' => $this->input->post('nama'));
-								$id_pelanggan = $this->Crud_m->tambah_user($data_user);
-								$data_user_detail = array(
-											   	'id_user' => $id_pelanggan);
-								$this->Crud_m->tambah_user_detail($data_user_detail);
+							if (isset($_POST['submit']))
+								{
+									$nama = $this->input->post('nama');
+									$username = $this->input->post('username');
+									$email = $this->input->post('email');
+									$password = hash("sha512", md5($this->input->post('password')));
+									$cek = $this->Crud_m->cek_register($username,$email,'user');
+								    $total = $cek->num_rows();
+									if ($total > 0)
+										{
+										$data['title'] = 'Periksa kembali email dan password Anda!';
+										$this->load->view('backend/register',$data);
+										}else{
+										        $saltid   = md5($email);
+														$data = array(
+																						'username'=>$this->input->post('username'),
+																						'password'=>hash("sha512", md5($this->input->post('password'))),
+																						'nama'=>$this->input->post('nama'),
+																						'email'=>$this->input->post('email'),
+																						'user_status'=> '0',
+																						'user_post_hari'=>hari_ini(date('w')),
+							                              'user_post_tanggal'=>date('Y-m-d'),
+							                              'user_post_jam'=>date('H:i:s'),
+																						'level'=>'4',
+																						'user_stat'=>'blokir',
+																						'id_session'=>md5($this->input->post('email')).'-'.date('YmdHis'));
 
-                $this->session->set_flashdata('user_registered', 'You are now registered and can log in');
+																						if($this->Crud_m->tambah_user($data)) {
 
-                redirect(base_url("login"));
-            }
-			}
+																								if($this->sendemail($email, $saltid,$username)){
+										                			            $this->session->set_flashdata('msg','<div class="alert bg-5 text-center">Segera lakukan aktivasi akun mantenbaru dari email anda. Harap merefresh pesan masuk di email Anda.</div>');
+										                			            redirect(base_url('daftar'));
+										                 						}else{
+										                      					$this->session->set_flashdata('msg','<div class="alert bg-5 text-center">Coba lagi ...</div>');
+										                          			    redirect(base_url('daftar'));
+										                  				    }
+																						}
+														$data['title'] = 'Sukses mendaftar';
+														$this->load->view('backend/register',$data);
+											}
+									}else{
+													$data['title'] = 'Masih eror';
+				                	$this->load->view('backend/register', $data);
+				            		}
+								}else{
+									$data['title'] = 'Ops.. Masih ada yang kurang. Silahkan dicek kembali.';
+									$this->load->view('backend/register',$data);
+								}
+	}
 	public function check_username_exists($username)
 	{
 					 $this->form_validation->set_message('check_username_exists', 'Username Sudah diambil. Silahkan gunakan username lain');

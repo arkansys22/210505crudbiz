@@ -303,6 +303,10 @@ class Crud_m extends CI_model{
    		return (isset($id)) ? $id : FALSE;
    	}
 
+    public function cek_register($username,$email,$table){
+          return $this->db->query("SELECT * FROM $table where username='".$this->db->escape_str($username)."' OR email='".$this->db->escape_str($email)."' ");
+      }
+
   public function tambah_user_detail($data)
    {
      $this->db->insert('user_detail', $data);

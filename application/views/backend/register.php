@@ -15,21 +15,32 @@
   <div class="card">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Daftar Sekarang!</p>
+      <?php echo $this->session->flashdata('msg'); ?>
+      <?php
+              if ($this->input->post('email')!=''){
+                echo "<div class='alert bg-5'><center>$title</center></div>";
+                echo form_open('daftar');
+              }elseif($this->input->post('username')!=''){
+                echo "<div class='alert bg-5'><center>$title</center></div>";
+                echo form_open('daftar');
+              }else{
 
-      <?php echo form_open('register'); ?>
+                echo form_open('daftar');
+                }
+            ?>
 
-          <input type="text" class="form-control" name="username" placeholder="Username" required>
+          <input type="text" class="form-control" name="username" placeholder="Username" >
           <small><?php echo form_error('username'); ?></small><br>
 
-          <input type="email" class="form-control" name="email" placeholder="Email" required>
+          <input type="email" class="form-control" name="email" placeholder="Email" >
           <small><?php echo form_error('email'); ?></small><br>
 
 
-          <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
+          <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" >
           <small><?php echo form_error('nama'); ?></small><br>
 
 
-          <input type="password" class="form-control" name="password" placeholder="Password" required>
+          <input type="password" class="form-control" name="password" placeholder="Password" >
           <small><?php echo form_error('password'); ?></small><br>
 
 
