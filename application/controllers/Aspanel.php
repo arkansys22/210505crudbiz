@@ -134,7 +134,7 @@ class Aspanel extends CI_Controller {
 																						'username'=>$this->input->post('username'),
 																						'password'=>hash("sha512", md5($this->input->post('password'))),
 																						'nama'=>$this->input->post('nama'),
-																						'email'=>$this->input->post('email'),
+																						'email'=>$this->db->escape_str($this->input->post('email')),
 																						'user_status'=> '0',
 																						'user_post_hari'=>hari_ini(date('w')),
 							                              'user_post_tanggal'=>date('Y-m-d'),
@@ -143,7 +143,7 @@ class Aspanel extends CI_Controller {
 																						'user_stat'=>'blokir',
 																						'id_session'=>md5($this->input->post('email')).'-'.date('YmdHis'));
 
-																						if($this->Crud_m->tambah_user($data)) {
+																						if($this->Crud_m->insert('user',$data)) {
 
 																								if($this->sendemail($email, $saltid,$username)){
 										                			            $this->session->set_flashdata('msg','<div class="alert bg-5 text-center">Segera lakukan aktivasi akun mantenbaru dari email anda. Harap merefresh pesan masuk di email Anda.</div>');
@@ -165,6 +165,37 @@ class Aspanel extends CI_Controller {
 									$this->load->view('backend/register',$data);
 								}
 	}
+	function sendemail($email,$saltid,$username){
+		  // configure the email setting
+					$config['protocol'] = 'smtp';
+					$config['smtp_host'] = 'ssl://mail.crudbiz.com'; //smtp host name
+					$config['smtp_port'] = '465'; //smtp port number
+					$config['smtp_user'] = 'aktivasi@crudbiz.com';
+					$config['smtp_pass'] = 'dh4wy3p1c'; //$from_email password
+					$config['mailtype'] = 'html';
+					$config['charset'] = 'iso-8859-1';
+					$config['wordwrap'] = TRUE;
+					$config['newline'] = "\r\n"; //use double quotes
+					$this->email->initialize($config);
+					$url = base_url()."user/confirmation/".$saltid;
+					$this->email->from('aktivasi@crudbiz.com', 'Aktivasi Akun');
+					$this->email->to($email);
+					$this->email->subject('Aktivasi Akun Yuk - Crudbiz');
+					$message = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'></head><body><p><strong>Hallo, $username</strong></p><p>Hanya tinggal 1 langkah lagi untuk bisa bergabung dengan Crudbiz.</p><p>Silahkan mengklik link di bawah ini</p>".$url."<br/><p>Salam Hangat</p><p>Crudbiz Team</p></body></html>";
+					$this->email->message($message);
+					return $this->email->send();
+		}
+	public function confirmation($key){
+					if($this->model_app->verifyemail($key))
+					{
+						$this->session->set_flashdata('msg','<div class="alert bg-3 text-center">Selamat Anda telah Resmi Bergabung! Silahkan Login.</div>');
+						redirect(base_url('login'));
+					}	else {
+						$this->session->set_flashdata('msg','<div class="alert bg-3 text-center">Ops. Anda gagal, silahkan coba lagi.</div>');
+						redirect(base_url('login'));
+					}
+	}
+
 	public function check_username_exists($username)
 	{
 					 $this->form_validation->set_message('check_username_exists', 'Username Sudah diambil. Silahkan gunakan username lain');
