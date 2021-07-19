@@ -13,6 +13,13 @@ class Crud_m extends CI_model{
   public $table_blogs ='blogs';
 
 
+  public function verifyemail($key)
+  {
+      $data = array('user_status' => 1);
+      $this->db->where('md5(email)', $key);
+      return $this->db->update('user', $data);
+  }
+
 
   public function view_ordering($table,$order,$ordering)
   {

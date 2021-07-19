@@ -142,8 +142,10 @@ class Aspanel extends CI_Controller {
 																						'level'=>'4',
 																						'user_stat'=>'blokir',
 																						'id_session'=>md5($this->input->post('email')).'-'.date('YmdHis'));
+																						$id_pelanggan = $this->Crud_m->tambah_user($data);
+																						$data_user_detail = array('id_user' => $id_pelanggan);
 
-																						if($this->Crud_m->insert('user',$data)) {
+																						if($this->model_app->insert('user',$data) AND $this->model_app->insert('user_detail',$data_user_detail)) {
 
 																								if($this->sendemail($email, $saltid,$username)){
 										                			            $this->session->set_flashdata('msg','<div class="alert bg-5 text-center">Segera lakukan aktivasi akun mantenbaru dari email anda. Harap merefresh pesan masuk di email Anda.</div>');
@@ -186,7 +188,7 @@ class Aspanel extends CI_Controller {
 					return $this->email->send();
 		}
 	public function confirmation($key){
-					if($this->model_app->verifyemail($key))
+					if($this->crud_m->verifyemail($key))
 					{
 						$this->session->set_flashdata('msg','<div class="alert bg-3 text-center">Selamat Anda telah Resmi Bergabung! Silahkan Login.</div>');
 						redirect(base_url('login'));
