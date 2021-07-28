@@ -179,7 +179,7 @@ class Aspanel extends CI_Controller {
 					$config['wordwrap'] = TRUE;
 					$config['newline'] = "\r\n"; //use double quotes
 					$this->email->initialize($config);
-					$url = base_url()."user/confirmation/".$saltid;
+					$url = base_url()."aspanel/confirmation/".$saltid;
 					$this->email->from('aktivasi@crudbiz.com', 'Aktivasi Akun');
 					$this->email->to($email);
 					$this->email->subject('Aktivasi Akun Yuk - Crudbiz');
