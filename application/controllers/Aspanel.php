@@ -109,7 +109,7 @@ class Aspanel extends CI_Controller {
 	public function register()
 	{
 						$data['title'] = 'Sign Up';
-            $this->form_validation->set_rules('username','','trim|required|min_length[5]|max_length[12]|is_unique[user.username]', array('trim' => '','required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
+            $this->form_validation->set_rules('username','','trim|required|min_length[5]|max_length[30]|is_unique[user.username]', array('trim' => '','min_length'=>'Minimal 5 karakter','max_length'=>'Minimal 50 karakter','required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
 						$this->form_validation->set_rules('nama','','trim|required', array('trim' => '','required'=>'Nama masih kosong'));
             $this->form_validation->set_rules('email','','trim|required|valid_email|is_unique[user.email]', array('trim' => '','required' => 'Email masih kosong','is_unique' => 'Email telah digunakan, silahkan gunakan email lain.'));
             $this->form_validation->set_rules('password','','trim|required', array('trim' => '','required'=>'Password masih kosong'));
@@ -127,7 +127,7 @@ class Aspanel extends CI_Controller {
 									if ($total > 0)
 										{
 										$data['title'] = 'Periksa kembali email dan password Anda!';
-										$this->load->view('backend/register',$data);
+										redirect(site_url('daftar'));
 										}else{
 										        $saltid   = md5($email);
 														$data = array(
@@ -144,7 +144,7 @@ class Aspanel extends CI_Controller {
 																						'id_session'=>md5($this->input->post('email')).'-'.date('YmdHis'));
 																						$data_user_detail = array('username'=>$this->db->escape_str($this->input->post('username')));
 
-																						if($this->model_app->insert('user',$data) AND $this->Crud_m->insert('user_detail',$data_user_detail)) {
+																						if($this->Crud_m->insert('user',$data) AND $this->Crud_m->insert('user_detail',$data_user_detail)) {
 
 																								if($this->sendemail($email, $saltid,$username)){
 										                			            $this->session->set_flashdata('msg','<div class="alert bg-5 text-center">Segera lakukan aktivasi akun mantenbaru dari email anda. Harap merefresh pesan masuk di email Anda.</div>');
