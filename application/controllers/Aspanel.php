@@ -112,16 +112,13 @@ class Aspanel extends CI_Controller {
             $this->form_validation->set_rules('username','','trim|required|min_length[5]|max_length[30]|is_unique[user.username]', array('trim' => '','min_length'=>'Minimal 5 karakter','max_length'=>'Maksimal 30 karakter','required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
 						$this->form_validation->set_rules('nama','','trim|required', array('trim' => '','required'=>'Nama masih kosong'));
             $this->form_validation->set_rules('email','','trim|required|valid_email|is_unique[user.email]', array('trim' => '','required' => 'Email masih kosong','is_unique' => 'Email telah digunakan, silahkan gunakan email lain.'));
-            $this->form_validation->set_rules('password','','trim|required', array('trim' => '','required'=>'Password masih kosong'));
-            $this->form_validation->set_rules('password2', '','trim|required|matches[password]', array('trim' => '','required' => 'Konfirmasi password masih kosong','matches'=>'Password tidak sama! Cek kembali password Anda'));
-
+          
             if($this->form_validation->run() != false){
 							if (isset($_POST['submit']))
 								{
 									$nama = $this->input->post('nama');
 									$username = $this->input->post('username');
 									$email = $this->input->post('email');
-									$password = hash("sha512", md5($this->input->post('password')));
 									$cek = $this->Crud_m->cek_register($username,$email,'user');
 								    $total = $cek->num_rows();
 									if ($total > 0)
@@ -132,7 +129,6 @@ class Aspanel extends CI_Controller {
 										        $saltid   = md5($email);
 														$data = array(
 																						'username'=>$this->input->post('username'),
-																						'password'=>hash("sha512", md5($this->input->post('password'))),
 																						'nama'=>$this->input->post('nama'),
 																						'email'=>$this->db->escape_str($this->input->post('email')),
 																						'user_status'=> '0',
