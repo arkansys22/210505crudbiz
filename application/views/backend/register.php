@@ -24,7 +24,6 @@
                 echo "<div class='alert bg-5'><center>$title</center></div>";
                 echo form_open('daftar');
               }else{
-
                 echo form_open('daftar');
                 }
             ?>
@@ -40,11 +39,11 @@
           <small><?php echo form_error('nama'); ?></small><br>
 
 
-          <input type="password" class="form-control" name="password" placeholder="Password" >
+          <input type="password" class="form-control" name="password" value="<?php echo set_value('password'); ?>" placeholder="Password" >
           <small><?php echo form_error('password'); ?></small><br>
 
 
-          <input type="password" class="form-control" name="password2" placeholder="Konfirmasi password">
+          <input type="password" class="form-control" name="password2" value="<?php echo set_value('password2'); ?>"placeholder="Konfirmasi password">
           <small><?php echo form_error('password2'); ?></small><br>
         <div class="row">
           <div class="col-4">
