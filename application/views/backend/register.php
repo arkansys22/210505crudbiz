@@ -29,14 +29,14 @@
                 }
             ?>
 
-          <input type="text" class="form-control" name="username" placeholder="Username" >
+          <input type="text" class="form-control" name="username" value="<?php echo set_value('username'); ?>" placeholder="Username" >
           <small><?php echo form_error('username'); ?></small><br>
 
-          <input type="email" class="form-control" name="email" placeholder="Email" >
+          <input type="email" class="form-control" name="email" value="<?php echo set_value('email'); ?>" placeholder="Email" >
           <small><?php echo form_error('email'); ?></small><br>
 
 
-          <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" >
+          <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama'); ?>" placeholder="Nama Lengkap" >
           <small><?php echo form_error('nama'); ?></small><br>
 
 
