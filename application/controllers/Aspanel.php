@@ -109,7 +109,7 @@ class Aspanel extends CI_Controller {
 	public function register()
 	{
 						$data['title'] = 'Sign Up';
-            $this->form_validation->set_rules('username','','trim|required|min_length[5]|max_length[30]|is_unique[user.username]', array('trim' => '','min_length'=>'Minimal 5 karakter','max_length'=>'Minimal 50 karakter','required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
+            $this->form_validation->set_rules('username','','trim|required|min_length[5]|max_length[30]|is_unique[user.username]', array('trim' => '','min_length'=>'Minimal 5 karakter','max_length'=>'Maksimal 30 karakter','required' => 'username masih kosong','is_unique' => 'Username telah digunakan, silahkan gunakan username lain.'));
 						$this->form_validation->set_rules('nama','','trim|required', array('trim' => '','required'=>'Nama masih kosong'));
             $this->form_validation->set_rules('email','','trim|required|valid_email|is_unique[user.email]', array('trim' => '','required' => 'Email masih kosong','is_unique' => 'Email telah digunakan, silahkan gunakan email lain.'));
             $this->form_validation->set_rules('password','','trim|required', array('trim' => '','required'=>'Password masih kosong'));
