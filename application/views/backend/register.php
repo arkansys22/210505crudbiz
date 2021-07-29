@@ -38,6 +38,13 @@
           <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama'); ?>" placeholder="Nama Lengkap" >
           <small><?php echo form_error('nama'); ?></small><br>
 
+
+          <input type="password" class="form-control" name="password" placeholder="Password" >
+          <small><?php echo form_error('password'); ?></small><br>
+
+
+          <input type="password" class="form-control" name="password2" placeholder="Konfirmasi password">
+          <small><?php echo form_error('password2'); ?></small><br>
         <div class="row">
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Register</button>
