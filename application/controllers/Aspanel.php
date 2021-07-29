@@ -157,6 +157,7 @@ class Aspanel extends CI_Controller {
 														$this->load->view('backend/register',$data);
 											}
 									}else{
+													$data['title'] = 'Silahkan lengkapi kembali';
 				                	$this->load->view('backend/register', $data);
 				            		}
 								}else{
@@ -169,7 +170,7 @@ class Aspanel extends CI_Controller {
 					$config['protocol'] = 'smtp';
 					$config['smtp_host'] = 'ssl://mail.crudbiz.com'; //smtp host name
 					$config['smtp_port'] = '465'; //smtp port number
-					$config['smtp_user'] = 'aktivasi@crudbiz.com';
+					$config['smtp_user'] = 'noreply@crudbiz.com';
 					$config['smtp_pass'] = 'dh4wy3p1c'; //$from_email password
 					$config['mailtype'] = 'html';
 					$config['charset'] = 'iso-8859-1';
@@ -177,7 +178,7 @@ class Aspanel extends CI_Controller {
 					$config['newline'] = "\r\n"; //use double quotes
 					$this->email->initialize($config);
 					$url = base_url()."aspanel/confirmation/".$saltid;
-					$this->email->from('aktivasi@crudbiz.com', 'Aktivasi Akun');
+					$this->email->from('noreply@crudbiz.com', 'Aktivasi Akun');
 					$this->email->to($email);
 					$this->email->subject('Aktivasi Akun Yuk - Crudbiz');
 					$message = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'></head><body><p><strong>Hallo, $username</strong></p><p>Hanya tinggal 1 langkah lagi untuk bisa bergabung dengan Crudbiz.</p><p>Silahkan mengklik link di bawah ini</p>".$url."<br/><p>Salam Hangat</p><p>Crudbiz Team</p></body></html>";
