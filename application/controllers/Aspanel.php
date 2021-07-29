@@ -115,7 +115,7 @@ class Aspanel extends CI_Controller {
             $this->form_validation->set_rules('password','','trim|required', array('trim' => '','required'=>'Password masih kosong'));
             $this->form_validation->set_rules('password2', '','trim|required|matches[password]', array('trim' => '','required' => 'Konfirmasi password masih kosong','matches'=>'Password tidak sama! Cek kembali password Anda'));
 
-            if($this->form_validation->run() === FALSE){
+            if($this->form_validation->run() != false){
 							if (isset($_POST['submit']))
 								{
 									$nama = $this->input->post('nama');
@@ -140,12 +140,12 @@ class Aspanel extends CI_Controller {
 							                              'user_post_tanggal'=>date('Y-m-d'),
 							                              'user_post_jam'=>date('H:i:s'),
 																						'level'=>'4',
-																						'user_stat'=>'blokir',
+																						'user_stat'=>'Publish',
 																						'id_session'=>md5($this->input->post('email')).'-'.date('YmdHis'));
 																						$id_pelanggan = $this->Crud_m->tambah_user($data);
 																						$data_user_detail = array('id_user' => $id_pelanggan);
 
-																						if($this->model_app->insert('user',$data) AND $this->model_app->insert('user_detail',$data_user_detail)) {
+																						if($this->Crud_m->insert('user_detail',$data_user_detail)) {
 
 																								if($this->sendemail($email, $saltid,$username)){
 										                			            $this->session->set_flashdata('msg','<div class="alert bg-5 text-center">Segera lakukan aktivasi akun mantenbaru dari email anda. Harap merefresh pesan masuk di email Anda.</div>');
@@ -159,7 +159,7 @@ class Aspanel extends CI_Controller {
 														$this->load->view('backend/register',$data);
 											}
 									}else{
-													$data['title'] = 'Masih eror';
+													$data['title'] = 'Silahkan lengkapi kembali';
 				                	$this->load->view('backend/register', $data);
 				            		}
 								}else{
