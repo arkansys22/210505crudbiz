@@ -478,7 +478,7 @@ class Aspanel extends CI_Controller {
 
 	function identitaswebsite()
 	{
-		cek_session_akses($this->session->id_session);
+		cek_session_akses('identitaswebsite',$this->session->id_session);
 		if (isset($_POST['submit'])){
 					$config['upload_path'] = 'assets/frontend/campur/';
 					$config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
@@ -668,7 +668,7 @@ class Aspanel extends CI_Controller {
     				}else{
     						$data['record'] = $this->Crud_m->view_join_where2_ordering('konsumen','perumahan','konsumen_perumahan_kode','perumahan_kode',array('konsumen_cs_fu'=>$this->session->username,'konsumen_status'=>'publish'),'konsumen_tgl_order','ASC');
     				}
-
+							cek_session_akses('konsumen',$this->session->id_session);
     			    $this->load->view('backend/konsumen/v_daftar', $data);
     	}
   public function exportxlskonsumen()
@@ -736,6 +736,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_join_where2_ordering('konsumen','perumahan','konsumen_perumahan_kode','perumahan_kode',array('konsumen_cs_fu'=>$this->session->username,'konsumen_status'=>'delete'),'konsumen_tgl_order','DESC');
 				}
+				cek_session_akses('konsumen',$this->session->id_session);
 				$this->load->view('backend/konsumen/v_daftar_hapus', $data);
 	}
 	public function konsumen_tambahkan()
@@ -786,6 +787,7 @@ class Aspanel extends CI_Controller {
 		            $data['record_kategori'] = $this->Crud_m->view_ordering('paketharga','paketharga_id','ASC');
 		            $data['record_medpro'] = $this->Crud_m->view_ordering('media_promosi','media_promosi_id','ASC');
 		            $data['record_bayar'] = $this->Crud_m->view_ordering('konsumen_pembayaran','konsumen_pembayaran_id','ASC');
+					cek_session_akses('konsumen',$this->session->id_session);
 					$this->load->view('backend/konsumen/v_tambahkan', $data);
 
 				}
@@ -796,7 +798,7 @@ class Aspanel extends CI_Controller {
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
 						$data = array(
-						                    'konsumen_kode'=>$this->input->post('konsumen_kode'),
+						          'konsumen_kode'=>$this->input->post('konsumen_kode'),
 											'konsumen_nama'=>$this->input->post('konsumen_nama'),
 											'konsumen_tgl_order'=>$this->input->post('konsumen_tgl_order'),
 											'konsumen_minggu'=>$this->input->post('konsumen_minggu'),
@@ -838,6 +840,7 @@ class Aspanel extends CI_Controller {
 		     $data['record_kodeper'] = $this->Crud_m->view_ordering('perumahan','perumahan_id','ASC');
 		     $data['record_medpro'] = $this->Crud_m->view_ordering('media_promosi','media_promosi_id','ASC');
 		     $data['record_bayar'] = $this->Crud_m->view_ordering('konsumen_pembayaran','konsumen_pembayaran_id','ASC');
+			cek_session_akses('konsumen',$this->session->id_session);
 			$this->load->view('backend/konsumen/v_update', $data);
 		}
 	}
@@ -855,12 +858,13 @@ class Aspanel extends CI_Controller {
 
         $data['record_cs'] = $this->Crud_m->view_ordering('user','id_user','DESC');
 	    $data['record'] = $this->Crud_m->view_ordering('perumahan','perumahan_id','DESC');
+		cek_session_akses('konsumen',$this->session->id_session);
 		$this->load->view('backend/konsumen/v_detail', $data);
 
 	}
 	function konsumen_delete_temp()
 	{
-
+			cek_session_akses('konsumen',$this->session->id_session);
 			$data = array('konsumen_status'=>'delete');
 			$where = array('konsumen_id' => $this->uri->segment(3));
 			$this->db->update('konsumen', $data, $where);
@@ -868,7 +872,7 @@ class Aspanel extends CI_Controller {
 	}
 	function konsumen_restore()
 	{
-
+		cek_session_akses('konsumen',$this->session->id_session);
 			$data = array('konsumen_status'=>'Publish');
 			$where = array('konsumen_id' => $this->uri->segment(3));
 			$this->db->update('konsumen', $data, $where);
@@ -876,10 +880,9 @@ class Aspanel extends CI_Controller {
 	}
 	public function konsumen_delete()
 	{
-
+			cek_session_akses('konsumen',$this->session->id_session);
 			$id = $this->uri->segment(3);
-
-			 $query = $this->db->delete('konsumen',['konsumen_id'=>$id]);
+			$query = $this->db->delete('konsumen',['konsumen_id'=>$id]);
 
 		redirect('aspanel/konsumen_storage_bin');
 	}
@@ -919,6 +922,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('slider',array('slider_post_oleh'=>$this->session->username,'slider_status'=>'publish'),'slider_id','DESC');
 				}
+				cek_session_akses('slider',$this->session->id_session);
 				$this->load->view('backend/slider/v_daftar', $data);
 	}
 	public function slider_storage_bin()
@@ -954,7 +958,7 @@ class Aspanel extends CI_Controller {
 				$data['produk_category']   = '';
 				$data['produk']   = '';
 				$data['services']   = '';
-
+				cek_session_akses('slider',$this->session->id_session);
 				$this->load->view('backend/slider/v_daftar_hapus', $data);
 	}
 	public function slider_tambahkan()
@@ -1054,7 +1058,7 @@ class Aspanel extends CI_Controller {
 					$data['produk_category']   = '';
 					$data['produk']   = '';
 					$data['services']   = '';
-
+					cek_session_akses('slider',$this->session->id_session);
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 					$this->load->view('backend/slider/v_tambahkan', $data);
 				}
@@ -1169,15 +1173,14 @@ class Aspanel extends CI_Controller {
 			$data['produk_category']   = '';
 			$data['produk']   = '';
 			$data['services']   = '';
-
+			cek_session_akses('slider',$this->session->id_session);
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 			$this->load->view('backend/slider/v_update', $data);
 		}
 	}
 	function slider_delete_temp()
 	{
-
-
+			cek_session_akses('slider',$this->session->id_session);
 			$data = array('slider_status'=>'delete');
 			$where = array('slider_id' => $this->uri->segment(3));
 			$this->db->update('slider', $data, $where);
@@ -1185,7 +1188,7 @@ class Aspanel extends CI_Controller {
 	}
 	function slider_restore()
 	{
-
+			cek_session_akses('slider',$this->session->id_session);
 			$data = array('slider_status'=>'Publish');
 			$where = array('slider_id' => $this->uri->segment(3));
 			$this->db->update('slider', $data, $where);
@@ -1193,7 +1196,7 @@ class Aspanel extends CI_Controller {
 	}
 	public function slider_delete()
 	{
-
+			cek_session_akses('slider',$this->session->id_session);
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('slider',['slider_id' => $id])->row();
 			 $query = $this->db->delete('slider',['slider_id'=>$id]);
@@ -1223,6 +1226,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_post_oleh'=>$this->session->username,'templates_status'=>'publish'),'templates_id','DESC');
 				}
+				cek_session_akses('message',$this->session->id_session);
 				$this->load->view('backend/templates/v_daftar', $data);
 	}
 	/*	Bagian untuk Message - Penutup	*/
@@ -1259,6 +1263,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('paketharga',array('paketharga_post_oleh'=>$this->session->username,'paketharga_status'=>'publish'),'paketharga_id','DESC');
 				}
+				cek_session_akses('paketharga',$this->session->id_session);
 				$this->load->view('backend/paketharga/v_daftar', $data);
 	}
 	public function paketharga_storage_bin()
@@ -1292,6 +1297,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('paketharga',array('paketharga_post_oleh'=>$this->session->username,'paketharga_status'=>'delete'),'paketharga_id','DESC');
 				}
+				cek_session_akses('paketharga',$this->session->id_session);
 				$this->load->view('backend/paketharga/v_daftar_hapus', $data);
 	}
 	public function paketharga_tambahkan()
@@ -1395,7 +1401,7 @@ class Aspanel extends CI_Controller {
 					$data['paketharga']   = 'active';
 					$data['produk']   = '';
 					$data['services']   = '';
-
+					cek_session_akses('paketharga',$this->session->id_session);
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 					$this->load->view('backend/paketharga/v_tambahkan', $data);
 				}
@@ -1514,12 +1520,13 @@ class Aspanel extends CI_Controller {
 				$data['produk']   = '';
 				$data['services']   = '';
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
+			cek_session_akses('paketharga',$this->session->id_session);
 			$this->load->view('backend/paketharga/v_update', $data);
 		}
 	}
 	function paketharga_delete_temp()
 	{
-
+			cek_session_akses('paketharga',$this->session->id_session);
 			$data = array('paketharga_status'=>'delete');
 			$where = array('paketharga_id' => $this->uri->segment(3));
 			$this->db->update('paketharga', $data, $where);
@@ -1527,7 +1534,7 @@ class Aspanel extends CI_Controller {
 	}
 	function paketharga_restore()
 	{
-
+			cek_session_akses('paketharga',$this->session->id_session);
 			$data = array('paketharga_status'=>'Publish');
 			$where = array('paketharga_id' => $this->uri->segment(3));
 			$this->db->update('paketharga', $data, $where);
@@ -1535,7 +1542,7 @@ class Aspanel extends CI_Controller {
 	}
 	public function paketharga_delete()
 	{
-
+			cek_session_akses('paketharga',$this->session->id_session);
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('paketharga',['paketharga_id' => $id])->row();
 			 $query = $this->db->delete('paketharga',['paketharga_id'=>$id]);
@@ -1579,6 +1586,7 @@ class Aspanel extends CI_Controller {
 					}else{
 							$data['record'] = $this->Crud_m->view_where_ordering('testimoni',array('testimoni_post_oleh'=>$this->session->username,'testimoni_status'=>'publish'),'testimoni_id','DESC');
 					}
+					cek_session_akses('testimoni',$this->session->id_session);
 					$this->load->view('backend/testimoni/v_daftar', $data);
 		}
 		public function testimoni_storage_bin()
@@ -1612,6 +1620,7 @@ class Aspanel extends CI_Controller {
 					}else{
 							$data['record'] = $this->Crud_m->view_where_ordering('testimoni',array('testimoni_post_oleh'=>$this->session->username,'testimoni_status'=>'delete'),'testimoni_id','DESC');
 					}
+					cek_session_akses('testimoni',$this->session->id_session);
 					$this->load->view('backend/testimoni/v_daftar_hapus', $data);
 		}
 		public function testimoni_tambahkan()
@@ -1713,7 +1722,7 @@ class Aspanel extends CI_Controller {
 						$data['testimoni']   = 'active';
 						$data['produk']   = '';
 						$data['services']   = '';
-
+						cek_session_akses('testimoni',$this->session->id_session);
 						$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 						$this->load->view('backend/testimoni/v_tambahkan', $data);
 					}
@@ -1829,13 +1838,14 @@ class Aspanel extends CI_Controller {
 					$data['testimoni']   = 'active';
 					$data['produk']   = '';
 					$data['services']   = '';
+					cek_session_akses('testimoni',$this->session->id_session);
 				$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 				$this->load->view('backend/testimoni/v_update', $data);
 			}
 		}
 		function testimoni_delete_temp()
 		{
-
+				cek_session_akses('testimoni',$this->session->id_session);
 				$data = array('testimoni_status'=>'delete');
 				$where = array('testimoni_id' => $this->uri->segment(3));
 				$this->db->update('testimoni', $data, $where);
@@ -1843,7 +1853,7 @@ class Aspanel extends CI_Controller {
 		}
 		function testimoni_restore()
 		{
-
+				cek_session_akses('testimoni',$this->session->id_session);
 				$data = array('testimoni_status'=>'Publish');
 				$where = array('testimoni_id' => $this->uri->segment(3));
 				$this->db->update('testimoni', $data, $where);
@@ -1851,7 +1861,7 @@ class Aspanel extends CI_Controller {
 		}
 		public function testimoni_delete()
 		{
-
+				cek_session_akses('testimoni',$this->session->id_session);
 				$id = $this->uri->segment(3);
 				$_id = $this->db->get_where('testimoni',['testimoni_id' => $id])->row();
 				 $query = $this->db->delete('testimoni',['testimoni_id'=>$id]);
@@ -1894,6 +1904,7 @@ class Aspanel extends CI_Controller {
 					}else{
 							$data['record'] = $this->Crud_m->view_where_ordering('bisnis',array('bisnis_post_oleh'=>$this->session->username,'bisnis_status'=>'publish'),'bisnis_id','DESC');
 					}
+					cek_session_akses('bisnis',$this->session->id_session);
 					$this->load->view('backend/klien/v_daftar', $data);
 		}
 		public function bisnis_storage_bin()
@@ -1927,6 +1938,7 @@ class Aspanel extends CI_Controller {
 					}else{
 							$data['record'] = $this->Crud_m->view_where_ordering('bisnis',array('bisnis_post_oleh'=>$this->session->username,'bisnis_status'=>'delete'),'bisnis_id','DESC');
 					}
+					cek_session_akses('bisnis',$this->session->id_session);
 					$this->load->view('backend/klien/v_daftar_hapus', $data);
 		}
 		public function bisnis_tambahkan()
@@ -2024,7 +2036,7 @@ class Aspanel extends CI_Controller {
 						$data['bisnis']   = 'active';
 						$data['produk']   = '';
 						$data['services']   = '';
-
+						cek_session_akses('bisnis',$this->session->id_session);
 						$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 						$this->load->view('backend/klien/v_tambahkan', $data);
 					}
@@ -2136,13 +2148,14 @@ class Aspanel extends CI_Controller {
 					$data['bisnis']   = 'active';
 					$data['produk']   = '';
 					$data['services']   = '';
+				cek_session_akses('bisnis',$this->session->id_session);
 				$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 				$this->load->view('backend/klien/v_update', $data);
 			}
 		}
 		function bisnis_delete_temp()
 		{
-
+			cek_session_akses('bisnis',$this->session->id_session);
 				$data = array('bisnis_status'=>'delete');
 				$where = array('bisnis_id' => $this->uri->segment(3));
 				$this->db->update('bisnis', $data, $where);
@@ -2150,7 +2163,7 @@ class Aspanel extends CI_Controller {
 		}
 		function bisnis_restore()
 		{
-
+				cek_session_akses('bisnis',$this->session->id_session);
 				$data = array('bisnis_status'=>'Publish');
 				$where = array('bisnis_id' => $this->uri->segment(3));
 				$this->db->update('bisnis', $data, $where);
@@ -2158,7 +2171,7 @@ class Aspanel extends CI_Controller {
 		}
 		public function bisnis_delete()
 		{
-
+				cek_session_akses('bisnis',$this->session->id_session);
 				$id = $this->uri->segment(3);
 				$_id = $this->db->get_where('bisnis',['bisnis_id' => $id])->row();
 				 $query = $this->db->delete('bisnis',['bisnis_id'=>$id]);
@@ -2203,6 +2216,7 @@ class Aspanel extends CI_Controller {
 						cek_session_staff ('templates_cat',$this->session->id_session);
 						$data['record'] = $this->Crud_m->view_where_ordering('templates_category',array('templates_cat_post_oleh'=>$this->session->username,'templates_cat_status'=>'publish'),'templates_cat_id','DESC');
 				}
+				cek_session_akses('templates_cat',$this->session->id_session);
 				$this->load->view('backend/templates_cat/v_daftar', $data);
 	}
 	public function templates_cat_storage_bin()
@@ -2238,6 +2252,7 @@ class Aspanel extends CI_Controller {
 						cek_session_staff ('templates_cat',$this->session->id_session);
 						$data['record'] = $this->Crud_m->view_where_ordering('templates_category',array('templates_cat_post_oleh'=>$this->session->username,'templates_cat_status'=>'delete'),'templates_cat_id','DESC');
 				}
+				cek_session_akses('templates_cat',$this->session->id_session);
 				$this->load->view('backend/templates_cat/v_daftar_hapus', $data);
 	}
 	public function templates_cat_tambahkan()
@@ -2338,7 +2353,7 @@ class Aspanel extends CI_Controller {
 					$data['produk_category']   = 'active';
 					$data['produk']   = '';
 					$data['services']   = '';
-
+					cek_session_akses('templates_cat',$this->session->id_session);
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 					$this->load->view('backend/templates_cat/v_tambahkan', $data);
 				}
@@ -2452,12 +2467,14 @@ class Aspanel extends CI_Controller {
 				$data['produk_category']   = 'active';
 				$data['produk']   = '';
 				$data['services']   = '';
+				cek_session_akses('templates_cat',$this->session->id_session);
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
 			$this->load->view('backend/templates_cat/v_update', $data);
 		}
 	}
 	function templates_cat_delete_temp()
 	{
+		cek_session_akses('templates_cat',$this->session->id_session);
 			$data = array('templates_cat_status'=>'delete');
 			$where = array('templates_cat_id' => $this->uri->segment(3));
 			$this->db->update('templates_category', $data, $where);
@@ -2465,6 +2482,7 @@ class Aspanel extends CI_Controller {
 	}
 	function templates_cat_restore()
 	{
+		cek_session_akses('templates_cat',$this->session->id_session);
 			$data = array('templates_cat_status'=>'Publish');
 			$where = array('templates_cat_id' => $this->uri->segment(3));
 			$this->db->update('templates_category', $data, $where);
@@ -2472,6 +2490,7 @@ class Aspanel extends CI_Controller {
 	}
 	public function templates_cat_delete()
 	{
+
 			cek_session_akses ('templates_cat',$this->session->id_session);
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('templates_category',['templates_cat_id' => $id])->row();
@@ -2514,6 +2533,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_post_oleh'=>$this->session->username,'templates_status'=>'publish'),'templates_id','DESC');
 				}
+				cek_session_akses('templates',$this->session->id_session);
 				$this->load->view('backend/templates/v_daftar', $data);
 	}
 	public function templates_storage_bin()
@@ -2539,6 +2559,7 @@ class Aspanel extends CI_Controller {
 				}else{
 						$data['record'] = $this->Crud_m->view_where_ordering('templates',array('templates_post_oleh'=>$this->session->username,'templates_status'=>'delete'),'templates_id','DESC');
 				}
+				cek_session_akses('templates',$this->session->id_session);
 				$this->load->view('backend/templates/v_daftar_hapus', $data);
 	}
 	public function templates_tambahkan()
@@ -2639,6 +2660,7 @@ class Aspanel extends CI_Controller {
 		 			$data['services']   = '';
 					$data['records'] = $this->Crud_m->view_ordering('templates_category','templates_cat_id','DESC');
 					$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
+					cek_session_akses('templates',$this->session->id_session);
 					$this->load->view('backend/templates/v_tambahkan', $data);
 				}
 	}
@@ -2748,11 +2770,13 @@ class Aspanel extends CI_Controller {
  			$data['services']   = '';
 			$data['records'] = $this->Crud_m->view_ordering('templates_category','templates_cat_id','ASC');
 			$data['tag'] = $this->Crud_m->view_ordering('keyword','keyword_id','DESC');
+			cek_session_akses('templates',$this->session->id_session);
 			$this->load->view('backend/templates/v_update', $data);
 		}
 	}
 	function templates_delete_temp()
 	{
+			cek_session_akses('templates',$this->session->id_session);
 			$data = array('templates_status'=>'delete');
       $where = array('templates_id' => $this->uri->segment(3));
 			$this->db->update('templates', $data, $where);
@@ -2760,6 +2784,7 @@ class Aspanel extends CI_Controller {
 	}
 	function templates_restore()
 	{
+			cek_session_akses('templates',$this->session->id_session);
 			$data = array('templates_status'=>'Publish');
       $where = array('templates_id' => $this->uri->segment(3));
 			$this->db->update('templates', $data, $where);
@@ -2807,6 +2832,7 @@ class Aspanel extends CI_Controller {
 				}else{
 					redirect('aspanel/home');
 				}
+				cek_session_akses('data_karyawan',$this->session->id_session);
 				$this->load->view('backend/data_karyawan/v_daftar', $data);
 	}
 	public function data_karyawan_storage_bin()
@@ -2835,6 +2861,7 @@ class Aspanel extends CI_Controller {
 				}else{
 					redirect('aspanel/home');
 				}
+			cek_session_akses('data_karyawan',$this->session->id_session);
 			$this->load->view('backend/data_karyawan/v_daftar_hapus', $data);
 	}
 	public function data_karyawan_tambahkan()
@@ -2940,6 +2967,7 @@ class Aspanel extends CI_Controller {
 						}else{
 							redirect('aspanel/home');
 						}
+						cek_session_akses('data_karyawan',$this->session->id_session);
 					$this->load->view('backend/data_karyawan/v_tambahkan', $data);
 				}
 	}
@@ -3127,12 +3155,13 @@ class Aspanel extends CI_Controller {
 			$data['records_kel'] = $this->Crud_m->view_ordering('user_kelamin','user_kelamin_id','DESC');
 			$data['records_agama'] = $this->Crud_m->view_ordering('user_agama','user_agama_id','ASC');
 			$data['records_kawin'] = $this->Crud_m->view_ordering('user_perkawinan','user_perkawinan_id','ASC');
+			cek_session_akses('data_karyawan',$this->session->id_session);
 			$this->load->view('backend/data_karyawan/v_update', $data);
 		}
 	}
 	function data_karyawan_delete_temp()
 	{
-
+			cek_session_akses('data_karyawan',$this->session->id_session);
 			$data = array('user_stat'=>'delete');
 			$where = array('id_user' => $this->uri->segment(3));
 			$this->db->update('user', $data, $where);
@@ -3140,7 +3169,7 @@ class Aspanel extends CI_Controller {
 	}
 	function data_karyawan_restore()
 	{
-
+			cek_session_akses('data_karyawan',$this->session->id_session);
 			$data = array('user_stat'=>'Publish');
 			$where = array('id_user' => $this->uri->segment(3));
 			$this->db->update('user', $data, $where);
@@ -3148,7 +3177,7 @@ class Aspanel extends CI_Controller {
 	}
 	public function data_karyawan_delete()
 	{
-
+			cek_session_akses('data_karyawan',$this->session->id_session);
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('user',['id_user' => $id])->row();
 			$query = $this->db->delete('user',['id_user'=> $id]);
