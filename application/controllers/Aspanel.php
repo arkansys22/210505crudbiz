@@ -81,7 +81,7 @@ class Aspanel extends CI_Controller {
             } else {
 
                 $username = $this->input->post('username');
-								$password = hash("sha512", md5($this->input->post('password')));
+								$password = sha1($this->input->post('password'));
 								$cek = $this->As_m->cek_login($username,$password,'user');
 							    $row = $cek->row_array();
 							    $total = $cek->num_rows();
